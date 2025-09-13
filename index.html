@@ -1,0 +1,3014 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<title>INSIDE CAT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+	<script>
+		zzfx=(...t)=>zzfxP(zzfxG(...t));zzfxP=(...t)=>{let e=zzfxX.createBufferSource(),f=zzfxX.createBuffer(t.length,t[0].length,zzfxR);t.map((d,i)=>f.getChannelData(i).set(d)),e.buffer=f,e.connect(zzfxX.destination),e.start();return e};zzfxG=(q=1,k=.05,c=220,e=0,t=0,u=.1,r=0,F=1,v=0,z=0,w=0,A=0,l=0,B=0,x=0,G=0,d=0,y=1,m=0,C=0)=>{let b=2*Math.PI,H=v*=500*b/zzfxR**2,I=(0<x?1:-1)*b/4,D=c*=(1+2*k*Math.random()-k)*b/zzfxR,Z=[],g=0,E=0,a=0,n=1,J=0,K=0,f=0,p,h;e=99+zzfxR*e;m*=zzfxR;t*=zzfxR;u*=zzfxR;d*=zzfxR;z*=500*b/zzfxR**3;x*=b/zzfxR;w*=b/zzfxR;A*=zzfxR;l=zzfxR*l|0;for(h=e+m+t+u+d|0;a<h;Z[a++]=f)++K%(100*G|0)||(f=r?1<r?2<r?3<r?Math.sin((g%b)**3):Math.max(Math.min(Math.tan(g),1),-1):1-(2*g/b%2+2)%2:1-4*Math.abs(Math.round(g/b)-g/b):Math.sin(g),f=(l?1-C+C*Math.sin(2*Math.PI*a/l):1)*(0<f?1:-1)*Math.abs(f)**F*q*zzfxV*(a<e?a/e:a<e+m?1-(a-e)/m*(1-y):a<e+m+t?y:a<h-d?(h-a-d)/u*y:0),f=d?f/2+(d>a?0:(a<h-d?1:(h-a)/d)*Z[a-d|0]/2):f),p=(c+=v+=z)*Math.sin(E*x-I),g+=p-p*B*(1-1E9*(Math.sin(a)+1)%2),E+=p-p*B*(1-1E9*(Math.sin(a)**2+1)%2),n&&++n>A&&(c+=w,D+=w,n=0),!l||++J%l||(c=D,v=H,n=n||1);return Z};zzfxV=.3;zzfxR=44100;zzfxX=new(window.AudioContext||webkitAudioContext);
+		//! ZzFXM (v2.0.3) | (C) Keith Clark | MIT | https://github.com/keithclark/ZzFXM
+		let zzfxM=(n,f,t,e=125)=>{let l,o,z,r,g,h,x,a,u,c,d,i,m,p,G,M=0,R=[],b=[],j=[],k=0,q=0,s=1,v={},w=zzfxR/e*60>>2;for(;s;k++)R=[s=a=d=m=0],t.map((e,d)=>{for(x=f[e][k]||[0,0,0],s|=!!f[e][k],G=m+(f[e][0].length-2-!a)*w,p=d==t.length-1,o=2,r=m;o<x.length+p;a=++o){for(g=x[o],u=o==x.length+p-1&&p||c!=(x[0]||0)|g|0,z=0;z<w&&a;z++>w-99&&u?i+=(i<1)/99:0)h=(1-i)*R[M++]/2||0,b[r]=(b[r]||0)-h*q+h,j[r]=(j[r++]||0)+h*q+h;g&&(i=g%1,q=x[1]||0,(g|=0)&&(R=v[[c=x[M=0]||0,g]]=v[[c,g]]||(l=[...n[c]],l[2]*=2**((g-12)/12),g>0?zzfxG(...l):[])))}m=G});return[b,j]};
+		let song = zzfxM(...[[[,0,23,,.15,.2,3,5],[3,0,43,,,.25,,,,,,,,2],[,0,655,,,.09,3,1.65,,,,,.02,3.8,-.1,,.2],[.4,0,2100,,,.2,3,3,,,-400,,,2],[.5,0,740,,.15,.15,2,.2,,-.15,9,,,.1,.12,,.06]],[[[,,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,12,12,12,12,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,,,,,],[1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,],[2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,,,,],[3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,24,22,20,18]],[[,,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,12,12,12,12,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,,,,,],[1,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,],[2,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,],[,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]],[[,,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,12,12,12,12,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,,,,,],[1,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,],[2,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,],[4,,12,,,,,,,,5,,,,10,,,,,,,,8,,,,7,,,,,,,,5,,,,12,,,,,,,,,,,,3,,,,3,,,,7,,,,7,,,,]],[[,,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,12,12,12,12,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,,,,,],[1,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,],[2,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,],[4,,12,,,,,,,,5,,,,10,,,,,,,,8,,,,7,,,,,,,,5,,,,12,,,,,,,,,,,,3,,,,3,,,,7,,,,7,,,,]],[[,,10,,,,,,,,8,,,,10,,,,,,,,,,,,,,,,10,10,10,10,12,,,,,,,,,,,,10,,,,12,,,,,,,,,,,,,,,,],[4,,3,,,,,,,,3,,,,3,,,,7,,,,5,,,,3,,,,10,8,7,5,3,,,,,,,,,,,,8,,,,10,,,,,,,,,,,,,,,,],[1,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,12,,,,,,,,12,,12,,,,,,12,,,,,,12,,12,,,,,,,,],[2,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,,,,,12,,,,],[4,,10,,,,,,,,8,,,,10,,,,,,,,8,,,,7,,,,,,,,8,,,,12,,,,,,,,,,,,3,,,,3,,,,7,,,,7,,,,]]],[0,1,2,3,4,2],150,{"title":"New Song","instruments":["Dig Dug","Bass Drum 2","Snare","Hihat Open","Flute"],"patterns":["Pattern 0","Pattern 1","Pattern 2","Pattern 3","Pattern 4"]}]);
+		let songNode;
+		let meowAudio = new Audio("data:audio/mp3;base64,SUQzBAAAAAAAIlRTU0UAAAAOAAADTGF2ZjU4LjIuMTAzAAAAAAAAAAAAAAD/40DAAAAAAAAAAAAASW5mbwAAAA8AAAAKAAAC2wBbW1tbW1tbW1ttbW1tbW1tbW1tf39/f39/f39/f5KSkpKSkpKSkpKkpKSkpKSkpKSktra2tra2tra2tsnJycnJycnJycnb29vb29vb29vb7e3t7e3t7e3t7f////////////8AAAAATGF2YzU4LjYuAAAAAAAAAAAAAAAAJANgAAAAAAAAAtuRB9lBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+MQxAAIgHnkAUMQAERC3d9z/rnAN9NwMXAMW9bw/4PxANBB36gf2iMP8Mf//BDEswEief/jEsQFCgkmnAGHUAA/se3ug8UXhp5Mx54X/+iiuNzMhHw8/Oa7HiH8h93v/f0/9aooNCU8/+MQxAQJCUagAco4AOZ3P//6oDAFnf///oIgqBJz///8cGg+I6nf+Fw9/5cCVTyDq7///f/jEMQGCboaoABoD6BCZrb///x+HsDUXr///3Jw7xREzNTdXjrE3///6sNgjF5gYHE2+VH/4xDEBgmiFqwqEBQxYZv//+ePwvxNT///mCoNAGha///6yMoTf//6GMQCqPlqIFBmYe9X/+MSxAYJkgqgKmgPov/1jWeSb///aEwN0a///8yEbMnb1cErJ///owwlH+wFqhgM8wBCPMz/4xDEBwnKCqBUOA8E72t//uBp81tOA4WPTb+3/gMf7v/9NlUAxnVP//+Mf8rVIxNrW81P/+MQxAYIMaaUAFAFoP9Th6Pnb///j0JoHR1///+oyIzP1MFZ/6xGRQoxnzasmaXqXYUFNP/jEMQMB9DWbAAQRuj5C5P+I4KCoHz3+oKmTrE/4VMklRX63VMG5AALIfFGvULM1C4rWzr/4xLEEwjoAdW+CEYAxSa+pv/1C3Fhdn62eLam+KpMQU1FMy4xMDCqqqqqqqqqqqqqqqqqqg==");
+		meowAudio.playbackRate = .4;
+		function meow(){
+			meowAudio.currentTime = 0;
+			meowAudio.play();
+		}
+		let scene;
+		let room;
+		let meowAudioAngry = new Audio("data:audio/mp3;base64,SUQzBAAAAAAAIlRTU0UAAAAOAAADTGF2ZjU4LjIuMTAzAAAAAAAAAAAAAAD/40DAAAAAAAAAAAAASW5mbwAAAA8AAAASAAAEfQA5OTk5OUVFRUVFRVFRUVFRXFxcXFxcaGhoaGh0dHR0dHR/f39/f4uLi4uLi5eXl5eXoqKioqKirq6urq6uurq6urrFxcXFxcXR0dHR0d3d3d3d3ejo6Ojo9PT09PT0//////8AAAAATGF2YzU4LjYuAAAAAAAAAAAAAAAAJAQkAAAAAAAABH3jDrHbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+MQxAADYAXoAAAAAK31n8vq5zDHd9uD//6FIqWpTbcbdAEhsbAxxVZ8pl/WU9QD6WSFS//jEsQZCGgCNl4AhABb/nKP+t//t1oEIMAODmI//PrM713a7bsgfUr4l+i06GYX5gPhTNVH/+MQxB8KcMIpTUYQAPZ8W//mMtvxclQiaP49gcLEbtS5xEoJtkicYA2AsR5+XC5mtBH+hv/jEMQcDwpmjAGTaAEl5HHO/+pFtZwe6Bcb/2+ZkmgaGn//6b////9v+cKCCtU5RN//uM7/4xDEBgjYXtgBwhAAFAAZgQ3s8SHlHPpCS3/0byiQQOB8MfrB9IIeD4PqGABmAlBHKLv//+MSxAkKghrZkBAPgfrqVvWhU//M5v/fwghX//5MmUOMM//8uxF/wWDQF4qMA25QLZRUEoD/4xDEBwnyHxJcEA+CByimNTT/p7/wQX//f//mU7//9jx9S/////FQhBYDggemSWCwzrgB/+MQxAYJshMLGDgFJQJMhxMer+nzWlHIp0lBMDf/yA7////9axziP///+kFIgpaB/7gY5v/jEMQGCeiLGlYwVBqABxuCbz/yE88fuIwNIbP//kSD//7hohET//kxxkkz+UCF3AAA/Az/4xLEBQfBA0peEAo2JpwBKQa/UXR////+iAos//9Z4tb/8UT/9Q9wbYa0ZhCgJIlP2vr/fv/jEMQOCGEDGlwQBSJCMtn//vOc8U//8RmUf/zynf/hxQgxhrhgEJiP8PmZV1fEwXvDv/r/4xDEEwigfuJQCA6ghCO//hUFhca7/zooHv/5FSmJI0BEGqAFyIXgTRSeizGgb/+LlXf//+MQxBcIuAruXDBEAqjwVEj//Jw7//hoOIEEwACUA9nYDN2ddhPUTGJrDLv/WRgr/+o0d//jEsQbCIhqrDRgBED/fMKAv//H1QbwYCjgAQ/u3/KblQUeZ4pS/wpBX/+kr/6mlVhr//JB/+MQxCAIWOqw/hAFBtJqDoQwhiVFTV2+GuBYVWvUVpvla/8rf////oGZ//TkquuHfRDp3v/jEMQlB5FuXABABQSg7yQllvXW7bLd9s7kpY91hrz35Wd5ajrMWkxBTUUzLjEwMKqqqqr/4xDELQcgBfwAAIYAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq/+MSxDcAoAQAANgAAKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo=");
+		meowAudioAngry.playbackRate = .75;
+		let catGrid = {x:0, z:0};
+		let cat = null;
+		let firstSit = false;
+		let startPos = {...catGrid};
+		let runningHome = false;
+		let alarming = false;
+		let security = true;
+
+		const buttonSpec = {
+			"g": "primitive: cylinder; height: 1; radius:.15",
+			"m": "color:#000",
+			"cl": "button",
+			"c": [
+					{
+						"g":"primitive:box;width:.5;height:.5;depth:.5",
+						"m":"opacity:0",
+						"p":"0 .5 0"
+					},
+					{
+						"g": "primitive: cylinder; radius:.1",
+						"m": "color:#f00",
+						"p": "0 .05 0"
+					},
+					{
+						"text": "value:DISABLE\nALARMS",
+						"sc": "4 4 4",
+						"r": "-90 0 0",
+						"p": "1.65 .5 -.4"
+					}
+				]
+		};
+		const spotSpec = {
+			"c": [
+				//{ "g": "primitive:cylinder;radius:.03;height:.2", "r": "90 0 0", "m": "color:#000"},
+				{
+					"p": "0 .05 .2",
+					"r": "-90 0 -45",
+					"cl": "spotlight",
+					"spotlight-detector":"target:#cat; angle:20; range:18; obstacles:.blocking-obj",
+					"animation__move": "property:rotation;to:-155 0 -45;dur:4000;loop:true;dir:alternate;easing:linear",
+					"c": [
+						{
+							"r": "90 0 0",
+							"g": "primitive:cone;radiusBottom:.14;radiusTop:.1;height:.25",
+							"m": "color:#000",
+							"c":
+								[
+									//{
+									//"li": "start:0 0 0; end: 0 -20 0; color:yellow"
+								//},
+								{
+									"p": "0 -.11 0",
+									"g": "primitive:sphere;radius:.12",
+									"m": "color:#fff;emissive:#fff",
+									"sc": "1 .3 1"
+								}]
+						},
+						{
+							"l": "type:spot;intensity:10;angle:10;castShadow:true"
+						}]
+				}]
+		};
+		const catSpec = {
+			"id": "cat",
+			"cl": "cat",
+			"p": "-7.58 .47 -3.75",
+			"r": "0 90 0",
+			"sh": "cast:true",
+			"walk-on-trigger": "speed:2; trigger:startwalk",
+			"run-on-trigger": "speed:7; trigger:startrun",
+			"jump-on-trigger": "trigger:startjump",
+			"status": "standing",
+			"blink": "",
+			"path-recorder": "",
+			"retrace-path": "",
+			"cat-seen": "",
+			"cat-runner": "",
+			"sit-stand": "",
+			"turn-trigger": "",
+			"pounce-trigger": "trigger:pounce;speed:10",
+			"press-button": "",
+			"c": [
+				{
+					"id": "torso-joint",
+					"p": "0 .46 .15",
+					"sc": ".8 1 1",
+					"c": [
+						{
+							"id": "torso",
+							"g": "primitive:sphere; radius:.23",
+							"m": "color:#000; roughness:.9",
+							"sh": "cast:true",
+							"p": "0 0 0",
+							"c": [
+								{
+									"id": "head-joint",
+									"p": "0 0 0",
+									"animation": "property:position; to:0 .27 .22; from:0 .26 .22; loop:true; dur:1000; dir:alternate",
+									"animation__standheadbob": "property:position; to:0 .27 .22; from:0 .26 .22; loop:true; dur:1000; dir:alternate; startEvents:catstand; delay:500",
+									"c": [
+										{
+											"id": "head",
+											"p": "0 0 0",
+											"g": "primitive:sphere; radius:.22",
+											"m": "color:#000; roughness:.9",
+											"sc": ".6 .8 .8",
+											"sh": "cast:true",
+											"c": [
+												{
+													"g": "primitive:cone; radiusBottom:.14; radiusTop:.04; height:.13",
+													"m": "color:#000",
+													"p": "0 -.05 .19",
+													"r": "0 90 90"
+												},
+												{
+													"g": "primitive:sphere; radius:.02",
+													"m": "color:#730",
+													"sc": "1 1 .5",
+													"p": "0 -.03 .26"
+												},
+												{
+													"g": "primitive:cone; radiusBottom:.08; radiusTop:0; height:.28",
+													"m": "color:#000",
+													"p": "-.1 .21 0",
+													"r": "0 0 15"
+												},
+												{
+													"g": "primitive:cone; radiusBottom:.08; radiusTop:0; height:.28",
+													"m": "color:#000",
+													"p": ".1 .21 0",
+													"r": "0 0 -15"
+												},
+												{
+													"cl": "eye",
+													"g": "primitive:sphere; radius:.03",
+													"m": "color:#ff4;emissive:#ff4",
+													"sc": "1 1 .3",
+													"p": "-.07 .04 .2",
+													"blink": "",
+													"c": [
+														{
+															"g": "primitive:sphere; radius:.03",
+															"m": "color:#000",
+															"sc": ".2 1 1",
+															"p": "0 0 .02"
+														}
+													]
+												},
+												{
+													"cl": "eye",
+													"g": "primitive:sphere; radius:.03",
+													"m": "color:#ff4;emissive:#ff4",
+													"sc": "1 1 .3",
+													"p": ".07 .04 .2",
+													"blink": "",
+													"c": [
+														{
+															"g": "primitive:sphere; radius:.03",
+															"m": "color:#000",
+															"sc": ".2 1 1",
+															"p": "0 0 .02"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"id": "shoulders",
+									"g": "primitive:sphere; radius:.21",
+									"m": "color:#000; roughness:.9",
+									"p": "0 .13 0",
+									"sc": ".8 .5 .5"
+								},
+								{
+									"id": "frontLegR-joint",
+									"g": "primitive:cylinder; radius:.045; height:.2",
+									"m": "color:#000",
+									"p": "-.12 -.19 .05",
+									"c": [
+										{
+											"id": "frontLegR",
+											"g": "primitive:cylinder; radius:.045; height:.2",
+											"m": "color:#000",
+											"c": [
+												{
+													"id": "frontLowerLegR-joint",
+													"g": "primitive:cylinder; radius:.045; height:.2",
+													"m": "color:#000",
+													"p": "0 -.18 0",
+													"c": [
+														{
+															"id": "frontLowerLegR",
+															"g": "primitive:cylinder; radius:.045; height:.2",
+															"m": "color:#000",
+															"c": [
+																{
+																	"id": "frontPawR-joint",
+																	"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																	"m": "color:#000; roughness:.9",
+																	"sh": "cast:true",
+																	"p": "0 -.06 .01",
+																	"c": [
+																		{
+																			"id": "frontPawR",
+																			"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																			"m": "color:#000; roughness:.9",
+																			"sh": "cast:true"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"id": "frontLegL-joint",
+									"g": "primitive:cylinder; radius:.045; height:.2",
+									"m": "color:#000",
+									"p": ".12 -.19 .05",
+									"c": [
+										{
+											"id": "frontLegL",
+											"g": "primitive:cylinder; radius:.045; height:.2",
+											"m": "color:#000",
+											"c": [
+												{
+													"id": "frontLowerLegL-joint",
+													"g": "primitive:cylinder; radius:.045; height:.2",
+													"m": "color:#000",
+													"p": "0 -.18 0",
+													"c": [
+														{
+															"id": "frontLowerLegL",
+															"g": "primitive:cylinder; radius:.045; height:.2",
+															"m": "color:#000",
+															"c": [
+																{
+																	"id": "frontPawL-joint",
+																	"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																	"m": "color:#000; roughness:.9",
+																	"sh": "cast:true",
+																	"p": "0 -.06 .01",
+																	"c": [
+																		{
+																			"id": "frontPawL",
+																			"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																			"m": "color:#000; roughness:.9",
+																			"sh": "cast:true"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "spine-joint",
+					"p": "0 .47 -.06",
+					"r": "87 0 0",
+					"c": [
+						{
+							"id": "spine",
+							"g": "primitive:cylinder; radius:.18; height:.35",
+							"m": "color:#000; roughness:1; metalness:0",
+							"sh": "cast:true",
+							"c": [
+								{
+									"id": "rear-joint",
+									"sc": ".8 1 1",
+									"p": "0 -.22 .02",
+									"cl": "rearR",
+									"c": [
+										{
+											"g": "primitive:sphere; radius:.22",
+											"m": "color:#000; roughness:.9",
+											"sh": "cast:true",
+											"c": [
+												{
+													"id": "tail-joint",
+													"p": "0 -.2 -.18",
+													"r": "30 0 0",
+													"animation__tailwag": "property:rotation; from:30 -15 0; to:30 15 0; dur:500; easing:easeInSine; dur:2000; dir:alternate; loop:true",
+													"animation__standtail": "property:rotation; to:30 0 0; dur:250; easing:easeInSine; startEvents:catstand",
+													"animation__standtail2": "property:position; to:0 -.2 -.18; dur:250; easing:easeInSine; startEvents:catstand",
+													"animation__tailwagstand": "property:rotation; from:30 -15 0; to:30 15 0; dur:500; easing:easeInSine; dur:2000; dir:alternate; loop:true; startEvents:catstand; delay:500",
+													"c": [
+														{
+															"g": "primitive:cylinder; radius:.035; height:.2",
+															"m": "color:#000",
+															"sh": "cast:true",
+															"animation__tailwag": "property:rotation; from:30 -15 0; to:30 15 0; dur:500; easing:easeInSine; dur:2000; dir:alternate; loop:true",
+															"animation__standtail": "property:rotation; to:30 0 0; dur:250; easing:easeInSine; startEvents:catstand",
+															"animation__standtail2": "property:position; to:0 -.2 -.18; dur:250; easing:easeInSine; startEvents:catstand",
+															"animation__tailwagstand": "property:rotation; from:30 -15 0; to:30 15 0; dur:500; easing:easeInSine; dur:2000; dir:alternate; loop:true; startEvents:catstand; delay:500",
+															"c": [
+																{
+																	"g": "primitive:cylinder; radius:.035; height:.2",
+																	"m": "color:#000",
+																	"sh": "cast:true",
+																	"p": "0 -.18 -.05",
+																	"r": "30 0 0",
+																	"animation__tailwag": "property:rotation; from:30 -5 0; to:30 5 0; dur:500; easing:easeInSine; dur:2000; dir:alternate; loop:true",
+																	"c": [
+																		{
+																			"g": "primitive:sphere; radius:.035",
+																			"m": "color:#000; roughness:.9",
+																			"sh": "cast:true",
+																			"p": "0 -.1 0"
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"id": "backUpperLegL-joint",
+													"p": ".15 -.02 .05",
+													"r": "90 0 90",
+													"c": [
+														{
+															"g": "primitive:cylinder; radius:.15; height:.08",
+															"m": "color:#000",
+															"sh": "cast:true",
+															"c": [
+																{
+																	"id": "backLegL-joint",
+																	"r": "90 -90 0",
+																	"p": ".02 0 .1",
+																	"c": [
+																		{
+																			"g": "primitive:cylinder; radius:.04; height:.3",
+																			"m": "color:#000",
+																			"sh": "cast:true",
+																			"p": "0 -.15 0",
+																			"c": [
+																				{
+																					"id": "backPawL-joint",
+																					"p": "0 -.18 0",
+																					"c": [
+																						{
+																							"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																							"m": "color:#000; roughness:.9",
+																							"sh": "cast:true"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"id": "backUpperLegR-joint",
+													"p": "-.15 -.02 .05",
+													"r": "90 0 90",
+													"c": [
+														{
+															"g": "primitive:cylinder; radius:.15; height:.08",
+															"m": "color:#000",
+															"sh": "cast:true",
+															"c": [
+																{
+																	"id": "backLegR-joint",
+																	"r": "90 -90 0",
+																	"p": ".02 0 .1",
+																	"c": [
+																		{
+																			"g": "primitive:cylinder; radius:.04; height:.3",
+																			"m": "color:#000",
+																			"sh": "cast:true",
+																			"p": "0 -.15 0",
+																			"c": [
+																				{
+																					"id": "backPawR-joint",
+																					"p": "0 -.18 0",
+																					"c": [
+																						{
+																							"g": "primitive:cone; radiusBottom:.06; radiusTop:.03; height:.06",
+																							"m": "color:#000; roughness:.9",
+																							"sh": "cast:true"
+																						}
+																					]
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		};
+		const floorSpec = {
+			"c":[
+				{
+					"id": "ground",
+					"cl": "clickable",
+					"sh": "receive:true",
+					"grid-floor": "w:10; h:10; size:1.5",
+					"p": "0 .42 0"
+				},
+				{
+					"g": "primitive:plane; width:15; height:10.5",
+					"m": "color:#540",
+					"p": "0 6.42 -2.25",
+					"r": "90 0 0"
+				}
+			]
+		}
+		const bgSpec = {
+			"c":[
+				{
+					"id": "hover",
+					"g": "primitive: plane; width: 1.5; height: 1.5",
+					"r": "-90 0 0",
+					"p": "-100 .45 0",
+					"m": "color: #ff0; opacity: .3",
+					"cl": "nohit"
+				},
+				{
+					"cl": "grass",
+					"g": "primitive: plane; width: 15; height: 4.5",
+					"p": "0 .44 5.25",
+					"r": "-90 0 0",
+					"m": "color: #777",
+					"sh": "receive:true"
+				},
+				{
+					"cl": "grass",
+					"g": "primitive: plane; width: 200; height: 200",
+					"p": "0 .4 0",
+					"r": "-90 0 0",
+					"m": "color: #777",
+					"sh": "receive:true"
+				},
+			]};
+		const exitSpec = {"c": [
+				{
+					"cl": "wall clickable",
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 4 0",
+					"m": "color: #fff",
+				},
+				{
+					"text": "value: EXIT; color:#f00; align:center",
+					"sc": "10 16 16",
+					"p": "0 2.25 .25"
+				},
+				{
+					"id": "hinge",
+					"p": "-.9 -1 -.1",
+					"door-trigger": true,
+					"c": [
+						{
+							"id": "door",
+							"g": "primitive: box; width: 2.5; height: 4; depth: .2",
+							"p": "1 0 0",
+							"m": "color: #999",
+							"c": [
+								{
+									"text": "value: EMERGENCY ONLY;align:center",
+									"sc": "4 4 4",
+									"p": "0 1.25 .21"
+								},
+								{
+									"text": "value: ALARM WILL SOUND;align:center",
+									"sc": "4 4 4",
+									"p": "0 .75 .21"
+								},
+								{
+									"id": "secureLight",
+									"g": "primitive: sphere; radius: .2",
+									"p": "0 .25 0",
+									"m": "emissive: #f00"
+								},
+								{
+									"cl": "bar clickable",
+									"g": "primitive: box; width: 1.75; height: .2; depth: 1.2",
+									"p": "-.1 -.2 -.4",
+									"m": "color: #fff"
+								}
+							]
+						}
+					]
+				}
+			]};
+		const doorSpec = {
+			"p":"0 2.5 .5",
+			"c":[
+				{
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 4.25 0",
+					"cl": "wall clickable",
+					"m": "color:#fff"
+				},
+				{
+					"g": "primitive: box; width: 2; height:4.5; depth:.25",
+					"p": "0 -.85 .1",
+					"m": "color:#6b5a4a"
+				},
+				{
+					"g": "primitive: box; width: 1.6; height:4; depth:.25",
+					"p": ".025 -1 .15",
+					"m": "color:#a67c52",
+					"c": [
+						{
+							"g": "primitive: sphere; radius:.13",
+							"p": "-.5 -.25 .11",
+							"m": "color:#fff"
+						}
+					]
+				}
+			]
+		};
+		const windowSpec = {
+			"p":"0 2.5 .5",
+			"c":[
+				{
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 -4.2 0",
+					"cl": "wall clickable",
+					"m": "color:#fff",
+					"sh": "receive:true;cast:true",
+					"c":[{
+						"g":"primitive:box; width:2.05; height:6.05; depth:.5",
+						"p":"0 0 -.05",
+						"m":"color:#ccc",
+						"cl":"outerwall"
+					}]
+				},
+				{
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 4.25 0",
+					"cl": "wall clickable",
+					"m": "color:#fff",
+					"sh": "receive:true;cast:true",
+					"c":[{
+						"g":"primitive:box; width:2.05; height:6.05; depth:.5",
+						"p":"0 0 -.05",
+						"m":"color:#ccc",
+						"cl":"outerwall"
+					}]
+				},
+				{
+					"g": "primitive: plane; width: 2; height:3.5",
+				 	"p": "0 .5 .1",
+				 	"m": "color:#000;opacity:.7"
+				}
+			]
+		};
+		const mirrorSpec = {
+			"p":"0 2.5 .5",
+			"c":[
+				{
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 -5.25 0",
+					"cl": "wall clickable",
+					"m": "color:#fff",
+					"sh": "receive:true;cast:true",
+					"c":[{
+						"g":"primitive:box; width:2.05; height:6.05; depth:.5",
+						"p":"0 0 -.05",
+						"m":"color:#ccc",
+						"cl":"outerwall"
+					}]
+				},
+				{
+					"g": "primitive:box; width:2; height:6; depth:.5",
+					"p": "0 4.25 0",
+					"cl": "wall clickable",
+					"m": "color:#fff",
+					"sh": "receive:true;cast:true",
+					"c":[{
+						"g":"primitive:box; width:2.05; height:6.05; depth:.5",
+						"p":"0 0 -.05",
+						"m":"color:#ccc",
+						"cl":"outerwall"
+					}]
+				},
+				{
+					"g": "primitive: plane; width: 2; height:3.5",
+					"p": "0 -.5 0",
+					"cl": "mirror",
+					"m": "color:#000;opacity:.5;transparent:true"
+				},
+				{
+					"g": "primitive:box; width:2; height:.2; depth:.2",
+					"p": "0 1.25 -.35",
+					"m": "color:#550"
+				},
+				{
+					"g": "primitive:box; width:2; height:.2; depth:.2",
+					"p": "0 -2.25 -.35",
+					"m": "color:#550"
+				},
+				{
+					"g": "primitive:box; width:.2; height:3.5; depth:.2",
+					"p": "-1 -.5 -.35",
+					"m": "color:#550"
+				}
+			]
+		};
+		const treasure = {
+			sc: '3 3 3',
+			c: [
+				{
+					g: "primitive:cone; height: .4; radiusBottom:.25; radiusTop:.005; segmentsRadial:6;openEnded:true",
+					m: "color:#99f; metalness:.5; roughness:.1; opacity:.7; transparent:true",
+					r: "180 0 0",
+					a: "property: rotation; to: 180 360 0; loop: true; dur: 12000; easing: linear",
+				},
+				{
+					g: "primitive:cone; height: .15; radiusBottom:.25; radiusTop:.15; segmentsRadial:6",
+					m: "color:#99f; metalness:.5; roughness:.1; opacity:.7; transparent:true",
+					p: "0 .275 0",
+					a: "property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear",
+				},
+			]};
+		const treasureSpec = {
+			c: [
+				{
+					id: "treasure",
+					g: "primitive:cylinder; radius:.8; height:.2",
+					m: "color:#333",
+					c: [
+						{
+							g: "primitive:cone; radiusBottom:.7; height:1; segmentsRadial:4",
+							m: "color:#333",
+							p: "0 .5 0",
+							r: "0 45 0"
+						},
+						{
+							g: "primitive:cone; radiusBottom:.7; height:1",
+							m: "color:#333",
+							p: "0 1.05 0",
+							r: "180 0 0"
+						},
+						{
+							g: "primitive:cylinder; radius:1.1; height:.2",
+							m: "color:#333",
+							p: "0 1.5 0",
+							s: "receive:false; cast:true",
+							c: [
+								{
+									g: "primitive:cylinder; radius:.3; height:.08",
+									m: "color:#fff",
+									p: "0 .08 0",
+									c: [
+										{
+											id:"treasure",
+											c: [
+												{
+													g: "primitive:cone; height: .4; radiusBottom:.25; radiusTop:.005; segmentsRadial:6;openEnded:true",
+													m: "color:#99f; metalness:.5; roughness:.1; opacity:.7; transparent:true",
+													p: "0 .25 0",
+													r: "180 0 0",
+													a: "property: rotation; to: 180 360 0; loop: true; dur: 12000; easing: linear",
+													sh: "cast:false; receive:false"
+												},
+												{
+													g: "primitive:cone; height: .15; radiusBottom:.25; radiusTop:.15; segmentsRadial:6",
+													m: "color:#99f; metalness:.5; roughness:.1; opacity:.7; transparent:true",
+													p: "0 .525 0",
+													a: "property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear",
+													sh: "cast:false; receive:false"
+												},
+											]
+										},
+										{
+											g: "primitive:cylinder; radius:.02; height:3",
+											m: "color:#000",
+											p: "0 4.5 0"
+										},
+										{
+											g: "primitive:cone; radiusBottom:.14; radiusTop:.1; height:.25",
+											m: "color:#000",
+											p: "0 3 0",
+											c: [
+												{
+													g: "primitive:sphere; radius:.12",
+													m: "color:#fff; emissive:#fff",
+													s: "1 .3 1",
+													p: "0 -.05 0"
+												}
+											]
+										},
+										{
+											l: "type: spot; intensity:.6; angle:10; distance:2",
+											p: ".1 1.5 .6",
+											r: "-70 10 0"
+										},
+										{
+											l: "type: spot; intensity:.5; angle:12; castShadow:true",
+											p: "0 3 0",
+											r: "-90 0 0"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+			]
+		};
+		const ropesSpec = {
+			id: "ropes",
+			c: [
+				{
+					g: "primitive:cylinder; radius:.05; height:1.6",
+					m: "color:#fff; metalness:.5",
+					p: "-1 -2.5 -1",
+					c: [
+						{ g: "primitive:cone; height:.1; radiusTop:.05; radiusBottom:.4", m: "color:#000", p: "0 -.5 0" },
+						{ g: "primitive:sphere; radius:.08", m: "color:#fff; metalness:.5", p: "0 .83 0" }
+					]
+				},
+				{
+					g: "primitive:cylinder; radius:.05; height:1.6",
+					m: "color:#fff; metalness:.5",
+					p: "1 -2.5 -1",
+					c: [
+						{ g: "primitive:cone; height:.1; radiusTop:.05; radiusBottom:.4", m: "color:#000", p: "0 -.5 0" },
+						{ g: "primitive:sphere; radius:.08", m: "color:#fff; metalness:.5", p: "0 .83 0" }
+					]
+				},
+				{
+					g: "primitive:cylinder; radius:.05; height:1.6",
+					m: "color:#fff; metalness:.5",
+					p: "-1 -2.5 1",
+					c: [
+						{ g: "primitive:cone; height:.1; radiusTop:.05; radiusBottom:.4", m: "color:#000", p: "0 -.5 0" },
+						{ g: "primitive:sphere; radius:.08", m: "color:#fff; metalness:.5", p: "0 .83 0" }
+					]
+				},
+				{
+					g: "primitive:cylinder; radius:.05; height:1.6",
+					m: "color:#fff; metalness:.5",
+					p: "1 -2.5 1",
+					c: [
+						{ g: "primitive:cone; height:.1; radiusTop:.05; radiusBottom:.4", m: "color:#000", p: "0 -.5 0" },
+						{ g: "primitive:sphere; radius:.08", m: "color:#fff; metalness:.5", p: "0 .83 0" }
+					]
+				},
+				{ g: "primitive:torus; arc:60; radius:2; radiusTubular:.02", m: "color:#F55", p: "0 0 1", r: "0 0 -120" },
+				{ g: "primitive:torus; arc:60; radius:2; radiusTubular:.02", m: "color:#F55", p: "-1 0 0", r: "0 90 -120" },
+				{ g: "primitive:torus; arc:60; radius:2; radiusTubular:.02", m: "color:#F55", p: "0 0 -1", r: "0 0 -120" },
+				{ g: "primitive:torus; arc:60; radius:2; radiusTubular:.02", m: "color:#F55", p: "1 0 0", r: "0 90 -120" }
+			]
+		};
+		const hiddenArt = {"c":[
+			{
+				"g": "primitive:plane; width:40; height:40",
+				"m": "color:#ddd;emissive:#999",
+				"p": "0 -100 -20.5"
+			},
+			{
+				"g": "primitive:plane; width:40; height:40",
+				"m": "color:#ddd;emissive:#999",
+				"p": "0 -200 -20.5"
+			},
+			{
+				"g": "primitive:plane; width:40; height:40",
+				"m": "color:#ddd;emissive:#999",
+				"p": "-15 -200 -1.5",
+				"r": "0 90 0"
+			},
+			{
+				"g": "primitive:plane; width:40; height:40",
+				"m": "color:#ddd;emissive:#999",
+				"p": "-15 -100 -1.5",
+				"r": "0 90 0"
+			},
+			{
+				"id": "piece1",
+				"g": "primitive:torusKnot;radiusTubular:.1;radius:3",
+				"p": "0 -100 -15",
+				"q": "7",
+				"m": "color:#B84A39;emissive:#300"
+			},
+			{
+				"id": "piece2",
+				"g": "primitive:torusKnot;radiusTubular:.1;radius:3",
+				"p": "0 -200 -15",
+				"q": "7",
+				"r": "90 60 0",
+				"m": "color:#394AB8;emissive:#003"
+			}
+		]};
+		const hiddenCamera = {"c":[
+			{
+				"id": "hiddenCam1",
+				"camera": "active:false",
+				"p": "0 -101 -12"
+			},
+			{
+				"id": "hiddenCam2",
+				"camera": "active:false",
+				"p": "0 -201 -12"
+			},
+			{
+				"id": "hiddenCam3",
+				"camera": "active:false",
+				"p": "5 -200 -16",
+				"r": "0 90 0"
+			},
+			{
+				"id": "hiddenCam4",
+				"camera": "active:false",
+				"p": "5 -101 -14",
+				"r": "0 90 0"
+			}
+		]};
+		const ventSpec = {
+				"r":"0 90 0",
+				"c":[
+					{
+						"g": "primitive:box; width:1.7; height:1.2; depth:1",
+						"m": "color:#000"
+					},
+					{
+						"cl": "vent",
+						"g": "primitive:box; width:1.7; height:.05; depth:1.2",
+						"m": "color:#999",
+						"r": "0 0 0",
+						"p": "0 .65 1.2"
+					}
+				]
+			};
+		const facadeSpec = {
+			"c": [
+				{
+					"p": ".5 14 -7.5",
+					"m": "color:#ccc",
+					"cl": "outerwall2",
+					"g": "primitive:box; width:18; height: 15; depth:22"
+				},
+				{
+					"p": "-22.7 0 -7.5",
+					"m": "color:#ccc",
+					"cl": "outerwall2",
+					"g": "primitive:box; width:30; height: 30; depth:22"
+				},
+			]
+		};
+		const wallSpec = {
+			"g": "primitive:box; width:2; height:6; depth:.5",
+			"p": "0 0 .5",
+			"cl": "wall clickable blocking-obj",
+			"m": "color:#fff;side:double",
+			"sh": "receive:true;cast:true",
+			"c":[{
+				"g":"primitive:box; width:2.05; height:6.05; depth:.5",
+				"p":"0 0 -.05",
+				"m":"color:#ccc",
+				"cl":"outerwall"
+			}]
+		}
+		const halfWallSpec = {
+			"g": "primitive:box; width:1.15; height:6; depth:.5",
+			"p": "0 0 .5",
+			"cl": "wall clickable blocking-obj",
+			"m": "color:#fff;side:double",
+			"sh": "receive:true;cast:true",
+			"c":[{
+				"g":"primitive:box; width:1.17; height:6.05; depth:.5",
+				"p":"0 0 -.05",
+				"m":"color:#ccc",
+				"cl":"outerwall"
+			}]
+		}
+
+		const ATTR = {id:"id", p:"position", r:"rotation", sc:"scale", g:"geometry", m:"material", sh:"shadow", cl:"class", c:"children", l:"light", li:"line", o:"color", a:"animation"};
+		currlevel = 1;
+		let levels = [];
+
+		levels[1] = [
+			{
+				"p": "-7.5 0 -8.25",
+				"r": "0 0 0",
+				"w": "WWWWDWWW"
+			},
+			{
+				"p": "-8.25 0 2",
+				"r": "0 90 0",
+				"w": "WWWWWW"
+			},
+			{
+				"p": "8.2 0 -8",
+				"r": "0 -90 0",
+				"w": "WWWEWW"
+			},
+			{
+				"p": "7.5 0 3.5",
+				"r": "0 180 0",
+				"w": "WIIIIIWW"
+			},
+			{
+				"p": "-2 2 -8",
+				"r": "90 0 0"
+			},
+			{
+				"c": [
+					{
+						"id": "art1",
+						"cl": "art",
+						"artId": 1,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-5 3.42 -7.4"
+					},
+					{
+						"id": "art2",
+						"cl": "art",
+						"artId": 2,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "4 3.42 -7.4"
+					},
+					{
+						"id": "art3",
+						"cl": "art",
+						"artId": 3,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-7.4 3.42 -4.4",
+						"r": "0 90 0"
+					},
+					{
+						"id": "art4",
+						"cl": "art",
+						"artId": 4,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-7.4 3.42 0",
+						"r": "0 90 0"
+					}
+				]
+			}
+		];
+		levels[2] = [
+			{
+				"p": "-7.5 0 -8.25",
+				"r": "0 0 0",
+				"w": "WWWMRWWW"
+			},
+			{
+				"p": "-8.25 0 2",
+				"r": "0 90 0",
+				"w": "WDWWWH"
+			},
+			{
+				"p": "8.2 0 -8",
+				"r": "0 -90 0",
+				"w": "HWWEWW"
+			},
+			{
+				"p": "7.5 0 3.5",
+				"r": "0 180 0",
+				"w": "WIWIWIWW"
+			},
+			{
+				"p": "-7.98 2 -2.2",
+				"r": "90 90 0"
+			},
+			{
+				"c": [
+					{
+						"id": "art1",
+						"cl": "art",
+						"artId": 1,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-5 3.42 -7.4"
+					},
+					{
+						"id": "art2",
+						"cl": "art",
+						"artId": 2,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "4 3.42 -7.4"
+					},
+					{
+						"id": "art3",
+						"cl": "art",
+						"artId": 3,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-7.4 3.42 -4.4",
+						"r": "0 90 0"
+					}
+				]
+			}
+		];
+		levels[3] = [
+			{
+				"p": "-7.5 0 -8.25",
+				"r": "0 0 0",
+				"w": "WWWMRWWW"
+			},
+			{
+				"p": "-8.25 0 2",
+				"r": "0 90 0",
+				"w": "WDWWWH"
+			},
+			{
+				"p": "8.2 0 -8",
+				"r": "0 -90 0",
+				"w": "HWWEWW"
+			},
+			{
+				"p": "7.5 0 3.5",
+				"r": "0 180 0",
+				"w": "WIWIWIWW"
+			},
+			{
+				"p": "-.5 2 3.2",
+				"r": "90 180 0"
+			},
+			{
+				"c": [
+					{
+						"id": "art1",
+						"cl": "art",
+						"artId": 1,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-5 3.42 -7.4"
+					},
+					{
+						"id": "art2",
+						"cl": "art",
+						"artId": 2,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "4 3.42 -7.4"
+					},
+					{
+						"id": "art3",
+						"cl": "art",
+						"artId": 3,
+						"g": "primitive:box; width:2.7; height:2.3; depth:.05",
+						"p": "-7.4 3.42 -4.4",
+						"r": "0 90 0"
+					}
+				]
+			}
+		];
+		function buildEntity(spec, parent, position, rotation){
+			const el = document.createElement("a-entity");
+			for (const k in spec){
+				const v = spec[k];
+				if (k === "c") v.forEach(child => buildEntity(child, el));
+				else if (k === "id") el.id = v;
+				else el.setAttribute(ATTR[k] || k, v);
+			}
+			if (position) el.setAttribute('position', position);
+			if (rotation) el.setAttribute('rotation', rotation);
+			parent.appendChild(el);
+			return el;
+		}
+		function flushRecursive(el) {
+			el.flushToDOM();
+			el.childNodes.forEach(n => n.nodeType === 1 && flushRecursive(n));
+		}
+		function loadLevel(level) {
+			buildEntity(floorSpec, room);
+			for (i=0;i<4;i++){
+				buildWall(levels[level][i], room);
+			}
+
+			buildEntity(ventSpec, room, "-7.99 1.07 -3.75");
+			buildEntity(treasureSpec, room, ".75 .47 -2.5");
+			buildEntity(ropesSpec, room, ".75 3.5 -2.5");
+			buildEntity(buttonSpec, room, levels[level][4].p, levels[level][4].r);
+			buildEntity(facadeSpec, scene);
+			buildEntity(spotSpec, room, ".76 5.55 -7.47");
+			buildEntity(spotSpec, room, "-5 5.55 -7.47");
+			buildEntity(levels[level][5], room);
+
+			document.querySelector('#piece1').setAttribute('rotation', '0 ' + Math.random()*360 + ' 0');
+			document.querySelector('#piece2').setAttribute('rotation', '0 ' + Math.random()*360 + ' 0');
+
+			let arts = document.querySelectorAll(".art");
+			arts.forEach((art) => {
+				console.log(art);
+				art.addEventListener('loaded', () => {
+					let artId = art.getAttribute('artId');
+					paintArt(artId);
+				})
+			});
+
+			let mirrors = document.querySelectorAll('.mirror');
+
+			if (mirrors.length > 0) {
+				mirrors.forEach((mirror) => {
+					mirror.addEventListener('loaded', () => {
+						const mesh = mirror.getObject3D('mesh');
+						if (mesh) {
+							mesh.material.depthWrite = false;
+						}
+					});
+				})
+				document.querySelector('#player').setAttribute('mirror-figure','target:#rig');
+				flushRecursive(room);
+				flushRecursive(cat);
+				const reflection = room.cloneNode(true);
+				reflection.setAttribute('id','reflection');
+				reflection.setAttribute('scale', '1 1 -1');
+				reflection.setAttribute('position', '0 0 -15.6');
+				scene.appendChild(reflection);
+				reflection.querySelectorAll('*').forEach(node => {
+					for (let {name, value} of [...node.attributes]) {
+						if ((name==='grid-floor') || (name==='id')) continue;
+						node.setAttribute(name, value);
+					}
+				});
+				reflection.object3D.traverse(o => {
+					if (o.isMesh) {
+						o.material = o.material.clone();
+						o.material.side = THREE.DoubleSide;
+					}
+				});
+
+
+				let kitty = document.querySelector('#reflection-cat');
+				cloneEntity(cat, kitty);
+				let head = document.querySelector('#head-joint');
+				head.setAttribute('look-at-cursor', '');
+				kitty.setAttribute('mirror-children', 'target:#cat');
+				kitty.removeAttribute('walk-on-trigger');
+				kitty.removeAttribute('run-on-trigger');
+				kitty.removeAttribute('status');
+				kitty.removeAttribute('blink');
+				kitty.removeAttribute('cat-seen');
+				kitty.removeAttribute('cat-runner');
+				kitty.removeAttribute('sit-stand');
+				kitty.removeAttribute('retrace-path');
+				kitty.removeAttribute('path-recorder');
+				kitty.removeAttribute('turn-trigger');
+				kitty.removeAttribute('pounce-trigger');
+				kitty.removeAttribute('press-button');
+				kitty.setAttribute('position', '-3 .47 2');
+				let mirror = document.createElement('a-entity');
+				mirror.setAttribute('id', 'mirrorLaser');
+				mirror.setAttribute('line', 'color:#fff');
+				scene.appendChild(mirror);
+				mirror.addEventListener('loaded', ()=> {
+					let rightHand = document.querySelector('#rightHand');
+					rightHand.setAttribute('mirror-laser', 'target: #mirrorLaser;mirrorZ:-8');
+				});
+			}
+
+			// ensure the entity itself finished loading
+			cat.addEventListener('loaded', () => {
+				updateCatGrid();				 // 1) after cat loaded
+				requestAnimationFrame(() => {
+					updateCatGrid();			 // 2) next frame (materials/transforms settled)
+				});
+				setTimeout(() => {
+					updateCatGrid();			 // 3) just in case (async components)
+				}, 0);
+				triggerSit();
+			});
+
+			//document.querySelector('#cursor').components.raycaster.refreshObjects();
+			document.querySelector('#rightHand').components.raycaster.refreshObjects();
+			startPos = cat.getAttribute('position');
+			paintWalls();
+			paintVent();
+			room.setAttribute('tile-hover','');
+		}
+		function buildWall(plan, parent) {
+			const rot = plan.r;
+			const pos = plan.p;
+			const panels = plan.w.split('');
+			const wall = document.createElement("a-entity");
+			let counter = 0;
+			panels.forEach((panel) => {
+				let wallPanel;
+				switch(panel) {
+					case "W":
+						wallPanel = buildEntity(wallSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "H":
+						wallPanel = buildEntity(halfWallSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "D":
+						wallPanel = buildEntity(doorSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "E":
+						wallPanel = buildEntity(exitSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "I":
+						wallPanel = buildEntity(windowSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "M":
+						wallPanel = buildEntity(mirrorSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+					case "R":
+						wallPanel = buildEntity(mirrorSpec, wall);
+						wall.appendChild(wallPanel);
+						wallPanel.setAttribute('scale', '-1 1 1');
+						wallPanel.setAttribute('position', counter + ' 3.42 .5');
+						break;
+				}
+				counter+=2;
+			});
+			wall.setAttribute('position', pos);
+			wall.setAttribute('rotation', rot);
+			parent.appendChild(wall);
+		}
+		function city() {
+			const scene = document.getElementById('scene');
+			for(let i=0;i<47;i++){
+				let angle = i * (2*Math.PI/47);
+				let x = Math.cos(angle)*100;
+				let z = Math.sin(angle)*100;
+				let h = 20+Math.random()*80;
+				let b = document.createElement('a-box');
+				b.setAttribute('position',x +' ' + (h/2-1) + ' ' + (z-10));
+				b.setAttribute('depth',20);
+				b.setAttribute('width',30);
+				b.setAttribute('height',h);
+				b.setAttribute('color','#222');
+				b.setAttribute('class','building');
+				scene.appendChild(b);
+			}
+		}
+		function fadeIn() {
+			const faders = document.querySelectorAll('.fader');
+			faders.forEach((fader)=>{
+				fader.emit('fadeIn');
+			});
+		}
+		function fadeOut() {
+			const faders = document.querySelectorAll('.fader');
+			faders.forEach((fader)=>{
+				fader.emit('fadeOut');
+			});
+		}
+		function lose() {
+			firstSit = false;
+			const el = document.querySelector('#room');
+			Array.from(el.children).forEach(child => child.remove());
+			cat.setAttribute('position', '-7.58 .47 -3.75');
+			cat.setAttribute('rotation', '0 90 0');
+			security = true;
+			songNode.stop();
+			toggleLasers(.3);
+			startGame(currlevel);
+		}
+		function win() {
+			firstSit = false;
+			const startButton = document.querySelector('#startLevel'+ currlevel);
+			startButton.setAttribute('material', 'emissive:#00f');
+			if (!document.querySelector('#treasure' + currlevel)) {
+				buildEntity(treasure, startButton, '-.35 0 -1');
+			}
+			const nextButton = document.querySelector('#startLevel' + currlevel++);
+			nextButton.setAttribute('material', 'emissive:#00f');
+			const rig = document.getElementById('rig');
+			rig.setAttribute('position', "200 1.2 3.2");
+			rig.setAttribute('rotation', "0 0 0");
+			const el = document.querySelector('#room');
+			Array.from(el.children).forEach(child => child.remove());
+			const reflection = document.querySelector('#reflection');
+			if (reflection) Array.from(reflection.children).forEach(child => child.remove());
+			cat.setAttribute('position', '-7.58 .47 -3.75');
+			cat.setAttribute('rotation', '0 90 0');
+			security = true;
+			toggleLasers(.3);
+			songNode.stop();
+		}
+		function hit(e) {
+			const inter = e.detail.intersection;
+			if (!inter || !inter.object) return;
+			const hit = inter.object.el;
+
+			if (hit && hit.classList.contains('floor-tile') && isAdjacent(hit, catGrid)) {
+				const tx = parseInt(hit.dataset.gx);
+				const tz = parseInt(hit.dataset.gz);
+
+				const dx = tx - catGrid.x;
+				const dz = tz - catGrid.z;
+
+				// 1. Rotate cat to face direction
+				//sit_stand();
+				const rot = getRotationForStep(dx, dz);
+				if (rot) {
+					cat.emit('turn', {rotation: {y: rot.y}});
+					if (!justPounced) {
+						justPounced = true;
+						setTimeout(function () {
+							cat.emit('pounce');
+						}, 500);
+						setTimeout(function () {
+							justPounced = false;
+						}, 1000);
+					}
+				}
+
+				// 2. Start walking animation
+				triggerStand();
+				const spine = document.querySelector('#spine');
+				spine.addEventListener('animationcomplete__stand', () => {
+					cat.emit('startwalk');
+
+					// 3. Animate position to target
+					const pos = hit.getAttribute('position');
+
+					cat.setAttribute('animation__move', {
+						property: 'position',
+						to: pos.x+' 0.45 '+pos.z,
+						dur: 200,
+						easing: 'linear'
+					});
+
+					// 4. When animation completes, stop walking and update grid
+					cat.addEventListener('animationcomplete__move', () => {
+						cat.emit('stopwalk');
+						catGrid.x = tx;
+						catGrid.z = tz;
+						cat.removeAttribute('animation__move'); // cleanup
+						//cat.emit('catsit');
+						triggerSit();
+					}, {once: true});
+				}, {once: true});
+			} else if (hit && hit.classList.contains('button') && isAdjacentButton(hit, catGrid)) {
+				let pos = hit.getAttribute('position');
+				let gridData = getGridData();
+				const dataset = worldToGrid(pos.x, pos.z, gridData.w, gridData.h, gridData.size);
+				const tx = parseInt(dataset.x);
+				const tz = parseInt(dataset.z);
+				const dx = tx - catGrid.x;
+				const dz = tz - catGrid.z;
+				const rot = getRotationForStep(dx, dz);
+				if (rot && rot.y !== Math.abs(cat.getAttribute('rotation').y)) {
+					cat.emit('turn', {rotation: {y: rot.y}});
+					setTimeout(function () {
+						cat.emit('pressbutton');
+					}, 125);
+				} else {
+					cat.emit('pressbutton');
+				}
+				if (!pressingButton) {
+					pressingButton = true;
+					setTimeout(function () {
+						pressingButton = false;
+						security = false;
+						document.querySelector('#secureLight').setAttribute('material', 'emissive:#000');
+						triggerSit();
+					}, 1000);
+				}
+			} else if (hit && hit.classList.contains('bar') && isAdjacentButton(hit, catGrid, 5)) {
+				let pos = hit.getAttribute('position');
+				let gridData = getGridData();
+				const dataset = worldToGrid(pos.x, pos.z, gridData.w, gridData.h, gridData.size);
+				const tx = parseInt(dataset.x);
+				const tz = parseInt(dataset.z);
+				const dx = tx - catGrid.x;
+				const dz = tz - catGrid.z;
+				const rot = getRotationForStep(dx, dz);
+				if (rot && rot.y !== Math.abs(cat.getAttribute('rotation').y)) {
+					cat.emit('turn', {rotation: {y: rot.y}});
+					setTimeout(function () {
+						cat.emit('pressbutton');
+					}, 250);
+				} else {
+					cat.emit('pressbutton');
+				}
+				if (!pressingButton) {
+					pressingButton = true;
+					setTimeout(function () {
+						pressingButton = false;
+						openDoor();
+						if (security) {
+							zzfx(...[,0,960,,1,.01,,.8,-0.01,,-190,.5,,.05,,,1]);
+							fadeOut();
+							setTimeout(lose,1000);
+						} else {
+							zzfx(...[,,20,.04,,.6,,1.31,,,-990,.06,.17,,,.04,.07]);
+							win();
+						}
+					}, 120);
+					setTimeout(triggerSit,500);
+				}
+			}
+		}
+		function intersect(e) {
+			if (!e.detail.intersections.length) {
+				hover.setAttribute('visible', false);
+				return;
+			}
+			const hit = e.detail.intersections[0]?.object?.el;
+			if (hit && hit.classList.contains('floor-tile') && isAdjacent(hit, catGrid)) {
+				const pos = hit.getAttribute('position');
+				hover.setAttribute('position', pos.x + ' 0.425 ' + pos.z);
+				hover.setAttribute('visible', true);
+			} else {
+				hover.setAttribute('visible', false);
+			}
+		}
+
+		function startGame(level){
+			currlevel = level;
+			loadLevel(level);
+			const rig = document.getElementById('rig');
+			rig.setAttribute('position', "-2 1.5 3.4");
+			rig.setAttribute('rotation', "0 0 0");
+			fadeIn();
+			triggerFirstSit();
+			setTimeout(()=> {
+				songNode = zzfxP(...song);
+				songNode.loop = true;
+			}, 800);
+			const controller = document.getElementById('rightHand');
+
+			controller.addEventListener('thumbstickmoved', (e) => {
+				const deadzone = 0.2;
+				const speed = 0.25;
+				if (Math.abs(e.detail.x) > deadzone) {
+					rig.object3D.position.x += e.detail.x * speed;
+				}
+			});
+		}
+		function meowAngry(){
+			if (meowAudioAngry.paused){
+				meowAudioAngry.currentTime = 0;
+				meowAudioAngry.play();
+			}
+		}
+		function openDoor() {
+			console.log('opening door');
+			const hinge = document.querySelector('#hinge');
+			hinge.emit('openDoor');
+		}
+		function getGridData() {
+			const gridEl = document.querySelector('[grid-floor]');
+			const d = gridEl?.components['grid-floor']?.data;
+			return d ? {w:d.w, h:d.h, size:d.size} : {w:10, h:10, size:1.5};
+		}
+
+		function worldToGrid(wx, wz, w, h, size) {
+			return {
+				x: Math.round(wx / size + w/2 - 0.5),
+				z: Math.round(wz / size + h/2 - 0.5),
+			};
+		}
+		function updateCatGrid() {
+			cat = document.querySelector('#cat');
+			const {w, h, size} = getGridData();
+			const v = new THREE.Vector3();
+			cat.object3D.getWorldPosition(v);
+			const g = worldToGrid(v.x, v.z, w, h, size);
+			catGrid.x = g.x;
+			catGrid.z = g.z;
+		}
+		function isAdjacent(tile, catGrid){
+			const tx = parseInt(tile.dataset.gx);
+			const tz = parseInt(tile.dataset.gz);
+			const dx = Math.abs(tx - catGrid.x);
+			const dz = Math.abs(tz - catGrid.z);
+			return dx + dz === 1;
+		}
+		function isAdjacentButton(hit, catGrid, offset){
+			let pos = hit.getAttribute('position');
+			let gridData = getGridData();
+			const dataset = worldToGrid(pos.x, pos.z, gridData.w, gridData.h, gridData.size);
+			const tx = parseInt(dataset.x);
+			const tz = parseInt(dataset.z);
+			let dx = Math.abs(tx - catGrid.x)
+			if (offset > 0) {
+				dx = Math.abs(tx - (catGrid.x - offset));
+			}
+			const dz = Math.abs(tz - catGrid.z);
+			return dx + dz === 1;
+		}
+		function getRotationForStep(dx, dz) {
+			if (dx === 1 && dz === 0) return {y: 90};
+			if (dx === -1 && dz === 0) return {y: -90};
+			if (dx === 0 && dz === -1) return {y: 180};
+			if (dx === 0 && dz === 1) return {y: 0};
+		}
+		function toggleLasers(opacity) {
+			let lasers = document.querySelectorAll('.laser');
+			lasers.forEach((laser)=>{
+				laser.setAttribute('material', 'opacity:'+opacity);
+			});
+		}
+		function triggerFirstSit(){
+			if (!firstSit) {
+				meow();
+
+				const cat = document.querySelector('#cat');
+				cat.emit('catstand');
+				cat.emit('startwalk');
+
+				const pos = {x:-6.7, y:.47, z:-3.75};
+
+				cat.setAttribute('animation__move', {
+					property: 'position',
+					to: pos.x+' 0.45 '+pos.z,
+					dur: 1000,
+					easing: 'linear'
+				});
+
+				cat.addEventListener('animationcomplete__move', () => {
+					cat.emit('stopwalk');
+					cat.removeAttribute('animation__move');
+					cat.emit('catsit');
+				}, {once: true});
+				firstSit = true;
+			}
+		}
+		function triggerSit() { cat.emit('catsit');}
+		function triggerSitForward() {
+			let gridData = getGridData();
+			cat.emit('catstand');
+			setTimeout(function(){cat.emit('startwalk', {distance: gridData.size/2})},100);
+			setTimeout(function(){cat.emit('catsit')}, 1000);
+		}
+		function triggerStand() { cat.emit('catstand');}
+
+		function paintWalls() {
+			const canvas = document.getElementById('brickTexture');
+			const ctx = canvas.getContext('2d');
+			ctx.fillStyle = "#221";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			ctx.lineWidth = 5;
+
+			for (let j = 0; j<= canvas.width; j+=64) {
+				for (let i = 0; i < canvas.height; i++) {
+					const y = i;
+					const x1 = 32 + Math.sin(y / 20) * 20 - 10;
+					const x2 = 32 + Math.cos(y / 20 + Math.PI/2) * 20;
+
+					ctx.fillStyle = "#311"; // secondary tone
+					ctx.fillRect(x1 + j, y, 15, 1);
+
+					ctx.fillStyle = "#311"; // brighter tone
+					ctx.fillRect(x2 + j, y, 15, 1);
+				}
+			}
+			let walls = document.querySelectorAll(".wall");
+			let texturewall = new THREE.CanvasTexture(canvas);
+			walls.forEach((wall) => {
+				wall.addEventListener('loaded', () => {
+					let mesh = wall.getObject3D('mesh');
+					mesh.material.map = texturewall;
+					mesh.material.needsUpdate = true;
+					texturewall.wrapS = texturewall.wrapT = THREE.RepeatWrapping;
+				});
+			});
+
+			const canvas3 = document.getElementById('brickTexture2');
+			const ctx3 = canvas3.getContext('2d');
+			canvas3.width = 256;
+			canvas3.height = 128;
+			ctx3.fillStyle = '#888';
+			ctx3.fillRect(0, 0, canvas3.width, canvas3.height);
+			ctx3.strokeStyle = '#666';
+			ctx3.lineWidth = 4;
+			ctx3.strokeRect(-canvas3.width/2, 0, canvas3.width, canvas3.height/2);
+			ctx3.strokeRect(canvas3.width/2, 0, canvas3.width, canvas3.height/2);
+			ctx3.strokeRect(canvas3.width/4, canvas3.height/2, canvas3.width/2, canvas3.height/2);
+			let outerwalls2 = document.querySelectorAll(".outerwall2");
+			let outerwalls = document.querySelectorAll(".outerwall");
+			let textureouterwall = new THREE.CanvasTexture(canvas3);
+			let textureouterwall2 = new THREE.CanvasTexture(canvas3);
+			outerwalls.forEach((wall) => {
+				wall.addEventListener('loaded', () => {
+					const mesh = wall.getObject3D('mesh');
+					mesh.material.map = textureouterwall;
+					mesh.material.needsUpdate = true;
+					textureouterwall.wrapS = textureouterwall.wrapT = THREE.RepeatWrapping;
+					textureouterwall.repeat.set(2,10);
+				});
+			});
+			outerwalls2.forEach((wall) => {
+				wall.addEventListener('loaded', () => {
+					const mesh = wall.getObject3D('mesh');
+					mesh.material.map = textureouterwall2;
+					mesh.material.needsUpdate = true;
+					textureouterwall2.wrapS = textureouterwall2.wrapT = THREE.RepeatWrapping;
+					textureouterwall2.repeat.set(20,50);
+				});
+			});
+		}
+
+		function paintVent() {
+			const canvas2 = document.querySelector('#ventTexture');
+			const ctx2 = canvas2.getContext('2d');
+			canvas2.width=256;
+			canvas2.height=128;
+			ctx2.fillStyle='#ccc';
+			ctx2.fillRect(0,0,256,128);
+			ctx2.strokeStyle='#555';
+			ctx2.lineWidth=10;
+			for (let iter=0; iter<=128; iter+=15){
+				ctx2.beginPath();
+				ctx2.moveTo(0, iter);
+				ctx2.lineTo(256, iter);
+				ctx2.stroke();
+			}
+			ctx2.strokeRect(2,2,254,126);
+			const textureVent = new THREE.CanvasTexture(canvas2);
+			textureVent.wrapS = textureVent.wrapT = THREE.RepeatWrapping;
+			textureVent.needsUpdate = true;
+			const vents = document.querySelectorAll('.vent');
+			vents.forEach((vent) => {
+				vent.addEventListener('loaded', () => {
+					const mesh = vent.getObject3D('mesh');
+					mesh.material = mesh.material.clone();
+					mesh.material.map = textureVent;
+					mesh.material.color.set('#fff');
+					mesh.material.needsUpdate = true;
+				});
+			})
+		}
+		function paintArt(id) {
+			const threeRenderer = scene.renderer;
+			const threeScene = scene.object3D;
+			artId = '#art' + id;
+			camId = '#hiddenCam' + id;
+			const hiddenCam = document.querySelector(camId).getObject3D("camera");
+			const plane = document.querySelector(artId);
+			const size = 512;
+			const renderTarget = new THREE.WebGLRenderTarget(size, size);
+
+			// Save XR state and disable temporarily
+			const wasXR = threeRenderer.xr.enabled;
+			threeRenderer.xr.enabled = false;
+
+			threeRenderer.setRenderTarget(renderTarget);
+			threeRenderer.render(threeScene, hiddenCam);
+			threeRenderer.setRenderTarget(null);
+
+			// Restore XR state
+			threeRenderer.xr.enabled = wasXR;
+
+			const texture = renderTarget.texture;
+			texture.encoding = THREE.sRGBEncoding;
+			const mesh = plane.getObject3D("mesh");
+			mesh.material = new THREE.MeshBasicMaterial({ map: texture });
+		}
+
+		function cloneEntity(sourceEl, targetEl) {
+			if (!sourceEl || !targetEl) return;
+
+			// Helper recursive function
+			function cloneNode(src, destParent) {
+				// Create new element with the same tag
+				const newEl = document.createElement(src.tagName.toLowerCase());
+
+				// Copy attributes except id
+				for (let i = 0; i < src.attributes.length; i++) {
+					const attr = src.attributes[i];
+					if (attr.name !== 'id' && attr.name !== 'look-at-cursor') {
+						newEl.setAttribute(attr.name, attr.value);
+					}
+				}
+
+				// Copy children recursively
+				for (let i = 0; i < src.children.length; i++) {
+					cloneNode(src.children[i], newEl);
+				}
+
+				// Append new node to parent
+				destParent.appendChild(newEl);
+			}
+
+			// Clear out target first
+			while (targetEl.firstChild) {
+				targetEl.removeChild(targetEl.firstChild);
+			}
+
+			// Clone children of source into target
+			for (let i = 0; i < sourceEl.children.length; i++) {
+				cloneNode(sourceEl.children[i], targetEl);
+			}
+		}
+
+
+		AFRAME.registerComponent('fade-trigger', {
+			init: function () {
+				this.el.addEventListener('fadeIn', () => {
+					this.intensity = this.el.getAttribute('light').intensity;
+					this.fadingIn = true;
+				});
+				this.el.addEventListener('fadeOut', () => {
+					this.intensity = this.el.getAttribute('light').intensity;
+					this.fadingOut = true;
+				});
+			},
+			tick(time, deltaTime) {
+				if (this.fadingIn) {
+					let currentIntensity = this.el.getAttribute('light').intensity;
+					const step = .1 * (deltaTime / 1000);
+					this.el.setAttribute('light', 'intensity', (currentIntensity + step));
+					if (currentIntensity+step >= .2) {
+						this.fadingIn = false;
+					}
+				} else if (this.fadingOut) {
+					let currentIntensity = this.el.getAttribute('light').intensity;
+					const step = this.intensity * (deltaTime / 1000);
+					this.el.setAttribute('light', 'intensity', (currentIntensity - step));
+					if (currentIntensity-step < .001) {
+						this.fadingOut = false;
+					}
+				}
+			}
+		});
+		AFRAME.registerComponent('door-trigger', {
+			schema: {
+				speed: {type: 'number', default: 360}, // degrees per second
+				trigger: {type:'string', default: 'openDoor'}
+			},
+
+			init: function () {
+				this.el.addEventListener(this.data.trigger, (e) => {
+					const currentRot = this.el.getAttribute('rotation');
+					this.startYaw = currentRot.y;
+					this.targetYaw = 90;
+
+					let delta = this.targetYaw - this.startYaw;
+					this.targetYaw = this.startYaw + delta;
+					this.isTurning = true;
+				});
+			},
+
+			tick: function (time, deltaTime) {
+				if (!this.isTurning) return;
+
+				const rot = this.el.getAttribute('rotation');
+				let currentYaw = rot.y;
+
+				// compute difference
+				let delta = this.targetYaw - currentYaw;
+				delta = ((delta + 180) % 360) - 180; // normalize to shortest path
+
+				// how much we can turn this frame
+				const step = this.data.speed * (deltaTime / 1000);
+
+				if (Math.abs(delta) <= step) {
+					// close enough, snap to target
+					currentYaw = this.targetYaw;
+					this.isTurning = false;
+				} else {
+					// move toward target
+					currentYaw += step * Math.sign(delta);
+				}
+
+				this.el.setAttribute('rotation', {x: rot.x, y: currentYaw, z: rot.z});
+			}
+		});
+		AFRAME.registerComponent('turn-trigger', {
+			schema: {
+				speed: {type: 'number', default: 360}, // degrees per second
+				trigger: {type:'string', default: 'turn'}
+			},
+
+			init: function () {
+				this.isTurning = false;
+				this.startYaw = 0;
+				this.targetYaw = 0;
+
+				this.el.addEventListener(this.data.trigger, (e) => {
+					const currentRot = this.el.getAttribute('rotation');
+					this.startYaw = currentRot.y;
+
+					// Get the desired target rotation (default 0 if not provided)
+					const targetRot = e.detail && e.detail.rotation ? e.detail.rotation : {x:0, y:0, z:0};
+					this.targetYaw = targetRot.y;
+
+					// Compute shortest direction (-180..180)
+					let delta = this.targetYaw - this.startYaw;
+					delta = ((delta + 180) % 360) - 180; // normalize
+					if (delta === -270) delta = 90;
+					this.targetYaw = this.startYaw + delta;
+					this.isTurning = true;
+				});
+			},
+
+			tick: function (time, deltaTime) {
+				if (!this.isTurning) return;
+
+				const rot = this.el.getAttribute('rotation');
+				let currentYaw = rot.y;
+
+				// compute difference
+				let delta = this.targetYaw - currentYaw;
+				delta = ((delta + 180) % 360) - 180; // normalize to shortest path
+
+				// how much we can turn this frame
+				const step = this.data.speed * (deltaTime / 1000);
+
+				if (Math.abs(delta) <= step) {
+					// close enough, snap to target
+					currentYaw = this.targetYaw;
+					this.isTurning = false;
+				} else {
+					// move toward target
+					currentYaw += step * Math.sign(delta);
+				}
+
+				this.el.setAttribute('rotation', {x: rot.x, y: currentYaw, z: rot.z});
+			}
+		});
+		AFRAME.registerComponent('pounce-trigger', {
+			schema: {
+				speed: {type: 'number', default: .5},
+				trigger: {type: 'string', default: 'pounce'},
+				height: {type: 'number', default: .5},
+				isPouncing: {type: 'bool', default: false}
+			},
+			init: function () {
+				this.data.isPouncing = false;
+				this.legs = [
+					{
+						id: '#head-joint',
+						rotation: { property: 'rotation', to: '30 0 0', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '0 .06 0.32', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#spine-joint',
+						rotation: { property: 'rotation', to: '105 0 0', dur: 225, easing: 'linear'},
+						position: { property: 'position', to: '0 0.38 .16', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#torso-joint',
+						rotation: { property: 'rotation', to: '0 0 0', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '0 0.34 0.35', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#rear-joint',
+						rotation: { property: 'rotation', to: '0 0 0', dur: 225, easing: 'linear'}
+					},
+					{
+						id: '#backUpperLegL-joint',
+						rotation: { property: 'rotation', to: '-5 0 90', dur: 250, easing: 'linear'},
+					},
+					{
+						id: '#backUpperLegR-joint',
+						rotation: { property: 'rotation', to: '-5 0 90', dur: 250, easing: 'linear'},
+					},
+					{
+						id: '#backLegR-joint',
+						rotation: { property: 'rotation', to: '90 -190 0', dur: 250, easing: 'linear'},
+					},
+					{
+						id: '#backLegL-joint',
+						rotation: { property: 'rotation', to: '90 -190 0', dur: 250, easing: 'linear'},
+					},
+					{
+						id: '#frontLegL-joint',
+						rotation: { property: 'rotation', to: '-55 0 -10', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '0.12 -.2 0.2', dur: 250, easing: 'linear'},
+						scale: { property: 'scale', to: '1 1.3 1', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#frontLegR-joint',
+						rotation: { property: 'rotation', to: '-55 0 10', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '-.12 -.2 0.2', dur: 250, easing: 'linear'},
+						scale: { property: 'scale', to: '1 1.3 1', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						rotation: { property: 'rotation', to: '-20 0 -15', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '-0.02 -.18 .02', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						rotation: { property: 'rotation', to: '-20 0 15', dur: 250, easing: 'linear'},
+						position: { property: 'position', to: '0.02 -.18 .02', dur: 250, easing: 'linear'}
+					},
+					{
+						id: '#frontPawL-joint',
+						rotation: { property: 'rotation', to: '40 0 0', dur: 250, easing: 'linear'},
+					},
+					{
+						id: '#frontPawR-joint',
+						rotation: { property: 'rotation', to: '40 0 0', dur: 250, easing: 'linear'},
+					}
+				];
+
+				this.el.addEventListener(this.data.trigger, () => {
+					if (!this.data.isPouncing) {
+						this.data.isPouncing = true;
+						this.startLegAnimations();
+					}
+				});
+
+				this.el.addEventListener('stoppounce', () => {
+					this.data.isPouncing = false;
+					setTimeout(triggerSit, 1000);
+				});
+			},
+
+			startLegAnimations: function () {
+				hover.setAttribute('visible', false);
+				const tileSize = getGridData().size; // usually 1.5
+				const direction = new THREE.Vector3();
+				this.el.object3D.getWorldDirection(direction);
+				direction.y = 0;
+				direction.normalize().multiplyScalar(tileSize - tileSize/2);
+
+				const currentPos = this.el.object3D.position.clone();
+				const targetPos = currentPos.clone().add(direction);
+
+				// midpoint at top of arc (forward halfway, up by height)
+				const midPos = currentPos.clone().add(direction.clone().multiplyScalar(0.5));
+				midPos.y += this.data.height; // height from schema (default 1)
+
+				// Animate UP (first half)
+				this.el.setAttribute('animation__pounceUp', {
+					property: 'position',
+					to: midPos.x+' '+midPos.y+' '+midPos.z,
+					dur: 125,
+					easing: 'easeOutQuad'
+				});
+
+				// After up finishes, animate DOWN to target
+				this.el.addEventListener('animationcomplete__pounceUp', () => {
+					this.el.setAttribute('animation__pounceDown', {
+						property: 'position',
+						to: targetPos.x+' '+targetPos.y+' '+targetPos.z,
+						dur: 125,
+						easing: 'easeInQuad'
+					});
+
+					this.el.addEventListener('animationcomplete__pounceDown', () => {
+						this.data.isPouncing = false;
+						this.el.removeAttribute('animation__pounceUp');
+						this.el.removeAttribute('animation__pounceDown');
+						updateCatGrid();
+						setTimeout(triggerSitForward, 125);
+					}, { once: true });
+				}, { once: true });
+
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__pounce' + index + '_rot');
+						el.removeAttribute('animation__pounce' + index + '_pos');
+						el.removeAttribute('animation__pounce' + index + '_scale');
+						if (leg.rotation) el.setAttribute('animation__pounce' + index + '_rot', leg.rotation);
+						if (leg.position) el.setAttribute('animation__pounce' + index + '_pos', leg.position);
+						if (leg.scale) el.setAttribute('animation__pounce' + index + '_scale', leg.scale);
+					}
+				});
+			},
+		});
+		AFRAME.registerComponent('press-button', {
+			schema: {
+				speed: {type: 'number', default: 1},
+				trigger: {type: 'string', default: 'pressbutton'}
+			},
+
+			init: function () {
+				this.legs = [
+					{
+						id: '#spine-joint',
+						rotation: { property: 'rotation', to: '25 0 0', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '0 1 .41', dur: 125, easing: 'linear'}
+					},
+					{
+						id: '#torso-joint',
+						rotation: { property: 'rotation', to: '10 0 0', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '0 1.2 0.55', dur: 125, easing: 'linear'}
+					},
+					{
+						id: '#rear-joint',
+						rotation: { property: 'rotation', to: '45 0 0', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '0 -.32 .02', dur: 125, easing: 'linear'}
+					},
+					{
+						id: '#backUpperLegL-joint',
+						rotation: { property: 'rotation', to: '35 0 90', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#backUpperLegR-joint',
+						rotation: { property: 'rotation', to: '35 0 90', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#backLegR-joint',
+						rotation: { property: 'rotation', to: '90 -190 0', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#backLegL-joint',
+						rotation: { property: 'rotation', to: '90 -190 0', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#frontLegL-joint',
+						rotation: { property: 'rotation', to: '55 0 -10', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '0.12 .3 0.4', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#frontLegR-joint',
+						rotation: { property: 'rotation', to: '55 0 10', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '-.12 .3 0.4', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						rotation: { property: 'rotation', to: '-20 0 -15', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '-0.02 -.18 .02', dur: 125, easing: 'linear'}
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						rotation: { property: 'rotation', to: '-20 0 15', dur: 125, easing: 'linear'},
+						position: { property: 'position', to: '0.02 -.18 .02', dur: 125, easing: 'linear'}
+					},
+					{
+						id: '#frontPawL-joint',
+						rotation: { property: 'rotation', to: '40 0 0', dur: 125, easing: 'linear'},
+					},
+					{
+						id: '#frontPawR-joint',
+						rotation: { property: 'rotation', to: '40 0 0', dur: 125, easing: 'linear'},
+					}
+				];
+
+				this.el.addEventListener(this.data.trigger, () => {
+					triggerStand();
+					this.startLegAnimations();
+				});
+			},
+			startLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__press'+index+'_rot');
+						el.removeAttribute('animation__press'+index+'_pos');
+						if (leg.rotation) el.setAttribute('animation__press'+index+'_rot', leg.rotation);
+						if (leg.position) el.setAttribute('animation__press'+index+'_pos', leg.position);
+					}
+					el.addEventListener('animationcomplete__press'+index+'_rot', () => {
+						this.stopLegAnimations();
+						toggleLasers(0);
+					}, {once:true});
+				});
+			},
+
+			stopLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__press'+index+'_rot');
+						el.removeAttribute('animation__press'+index+'_pos');
+					}
+				});
+			},
+		});
+		AFRAME.registerComponent('cat-seen', {
+			schema: {
+				speed: {type: 'number', default: 5},
+				trigger: {type: 'string', default: 'startjump'},
+				height: {type: 'number', default: 2}
+			},
+
+			init: function () {
+				this.isMoving = false;
+				this.legs = [
+					{
+						id: '#cat',
+						position: { property: 'position', dur: 250, easing: 'easeOutQuad', dir:'alternate', loop:1}
+					},
+					{
+						id: '#backUpperLegL-joint',
+						rotation: { property: 'rotation', to: '90 0 90', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '.15 -.02 .1', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#backUpperLegR-joint',
+						rotation: { property: 'rotation', to: '90 0 90', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '-.15 0 .02', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#backLegR-joint',
+						rotation: { property: 'rotation', to: '90 -90 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '0.2 0 .0', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#backLegL-joint',
+						rotation: { property: 'rotation', to: '90 -90 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '.2 0 .05', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#frontLegL-joint',
+						rotation: { property: 'rotation', to: '-45 0 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '0.12 -.19 0.05', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#frontLegR-joint',
+						rotation: { property: 'rotation', to: '-45 0 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '-.12 -.19 -.05', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						rotation: { property: 'rotation', to: '-25 0 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '0 -.21 .03', dur: 150, easing: 'linear'}
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						rotation: { property: 'rotation', to: '-25 0 0', dur: 150, easing: 'linear'},
+						position: { property: 'position', to: '0 -.21 .03', dur: 150, easing: 'linear'}
+					}
+				];
+
+				this.el.addEventListener(this.data.trigger, () => {
+					if (!this.isMoving) {
+						this.isMoving = true;
+						triggerStand();
+						this.startLegAnimations();
+					}
+				});
+
+				this.el.addEventListener('stopjump', () => {
+					this.stopLegAnimations();
+					this.el.emit('startrun');
+				});
+			},
+			startLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						if (leg.rotation) el.setAttribute('animation__jump'+index+'_rot', leg.rotation);
+						if (leg.position) {
+							const pos = Object.assign({}, leg.position);
+							if (el.id==='cat') {
+								let currPos = el.getAttribute('position');
+								pos.to = currPos.x + ' ' + this.data.height + ' ' + currPos.z;
+								el.removeAttribute('animation__jump'+index+'_pos');
+								el.setAttribute('animation__jump'+index+'_pos', pos);
+								el.addEventListener('animationcomplete__jump'+index+'_pos', () => {
+									el.emit('stopjump');
+								}, {once:true});
+							} else {
+								el.setAttribute('animation__jump'+index+'_pos', pos);
+							}
+						}
+					}
+				});
+			},
+
+			stopLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__jump'+index+'_rot');
+						el.removeAttribute('animation__jump'+index+'_pos');
+						if (el.id==='cat') el.addEventListener('animationcomplete__jump'+index+'_pos', () => {
+							el.emit('startrun');
+						});
+					}
+				});
+			},
+		});
+
+		AFRAME.registerComponent('walk-on-trigger', {
+			schema: {
+				speed: {type: 'number', default: 2},
+				trigger: {type: 'string', default: 'startwalk'},
+				distance: {type: 'number', default: 3}
+			},
+
+			init: function () {
+				this.isMoving = false;
+				this.startPos = null;
+				this.travelled = 0;
+
+				this.legs = [
+					{
+						id: '#shoulders',
+						rotation: { property: 'rotation', from: '0 0 -15', to: '0 0 15', dur: 225, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#torso-joint',
+						rotation: { property: 'position', from: '0 0.46 0.15', to: '0 0.44 0.15', dur: 225, easing: 'linear', loop: true, dir: 'alternate', delay:112 }
+					},
+					{
+						id: '#rear-joint',
+						rotation: { property: 'position', from: '0 -.22 .02', to: '0 -.22 .04', dur: 225, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backUpperLegL-joint',
+						rotation: { property: 'rotation', from: '75 0 90', to: '125 0 90', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backUpperLegR-joint',
+						rotation: { property: 'rotation', from: '125 0 90', to: '75 0 90', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backLegR-joint',
+						rotation: { property: 'rotation', from: '90 -85 0', to: '90 -75 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backLegL-joint',
+						rotation: { property: 'rotation', from: '90 -85 0', to: '90 -75 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLegL-joint',
+						rotation: { property: 'rotation', from: '45 0 0', to: '-25 0 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLegR-joint',
+						rotation: { property: 'rotation', from: '-25 0 0', to: '45 0 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						rotation: { property: 'rotation', from: '0 0 0', to: '-25 0 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						rotation: { property: 'rotation', from: '-25 0 0', to: '0 0 0', dur: 450, easing: 'linear', loop: true, dir: 'alternate' }
+					}
+				];
+
+				this.el.addEventListener(this.data.trigger, (e) => {
+					//console.log(e);
+					const distance = e.detail && e.detail.distance ? e.detail.distance : 0;
+					if (!this.isMoving) {
+						//console.log('starting to move');
+						this.remainingDistance = distance;
+						this.startLegAnimations();
+						this.isMoving = true;
+					}
+				});
+
+				this.el.addEventListener('stopwalk', () => {
+					this.isMoving = false;
+					this.stopLegAnimations();
+				});
+			},
+
+			startLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						if (leg.rotation) el.setAttribute('animation__walk'+index+'_rot', leg.rotation);
+						if (leg.position) el.setAttribute('animation__walk'+index+'_pos', leg.position);
+					}
+				});
+			},
+
+			stopLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__walk'+index+'_rot');
+						el.removeAttribute('animation__walk'+index+'_pos');
+					}
+				});
+			},
+
+			tick: function (time, deltaTime) {
+				if (!this.isMoving) return;
+
+				const step = this.data.speed * (deltaTime / 1000);
+
+				if (this.remainingDistance !== undefined) {
+					if (this.remainingDistance > 0) {
+						const direction = new THREE.Vector3();
+						this.el.object3D.getWorldDirection(direction);
+						direction.multiplyScalar(step);
+						this.el.object3D.position.add(direction);
+
+						this.remainingDistance -= step;
+
+						if (this.remainingDistance <= 0) {
+							this.isMoving = false;
+							this.stopLegAnimations();
+							this.el.emit('stopwalk');
+						}
+					}
+				}
+			}
+		});
+		AFRAME.registerComponent('run-on-trigger', {
+			schema: {
+				speed: {type: 'number', default: 1},
+				trigger: {type: 'string', default: 'startrun'}
+			},
+
+			init: function () {
+				this.isMoving = false;
+				this.legs = [
+					{
+						id: '#torso-joint',
+						rotation: { property: 'position', from: '0 0.46 0.15', to: '0 0.42 0.15', dur: 150, easing: 'linear', loop: true, dir: 'alternate', delay:112 }
+					},
+					{
+						id: '#rear-joint',
+						rotation: { property: 'position', from: '0 -.22 .02', to: '0 -.22 .08', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backUpperLegL-joint',
+						rotation: { property: 'rotation', from: '55 0 90', to: '165 0 90', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backUpperLegR-joint',
+						rotation: { property: 'rotation', from: '55 0 90', to: '165 0 90', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backLegR-joint',
+						rotation: { property: 'rotation', from: '90 -85 0', to: '90 -75 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' },
+						position: { property: 'position', from: '0.2 0 .05', to: '0.2 0 .0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#backLegL-joint',
+						rotation: { property: 'rotation', from: '90 -85 0', to: '90 -75 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' },
+						position: { property: 'position', from: '0.2 0 .05', to: '0.2 0 .0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLegL-joint',
+						rotation: { property: 'rotation', from: '45 0 0', to: '-45 0 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLegR-joint',
+						rotation: { property: 'rotation', from: '45 0 0', to: '-45 0 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						rotation: { property: 'rotation', from: '0 0 0', to: '-25 0 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' },
+						position: { property: 'position', from: '0 -.21 0', to: '0 -.21 .03', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						rotation: { property: 'rotation', from: '0 0 0', to: '-25 0 0', dur: 150, easing: 'linear', loop: true, dir: 'alternate' },
+						position: { property: 'position', from: '0 -.21 0', to: '0 -.21 .03', dur: 150, easing: 'linear', loop: true, dir: 'alternate' }
+					}
+				];
+
+				this.el.addEventListener(this.data.trigger, () => {
+					if (!this.isMoving) {
+						this.startLegAnimations();
+					}
+					this.isMoving = true;
+				});
+
+				this.el.addEventListener('stoprun', () => {
+					this.isMoving = false;
+					this.stopLegAnimations();
+				});
+			},
+
+			startLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						if (leg.rotation) el.setAttribute('animation__run'+index+'_rot', leg.rotation);
+						if (leg.position) el.setAttribute('animation__run'+index+'_pos', leg.position);
+					}
+				});
+			},
+
+			stopLegAnimations: function () {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (el) {
+						el.removeAttribute('animation__run'+index+'_rot');
+						el.removeAttribute('animation__run'+index+'_pos');
+					}
+				});
+			},
+
+			tick: function (time, deltaTime) {
+				if (!this.isMoving) return;
+
+				// const direction = new THREE.Vector3();
+				// this.el.object3D.getWorldDirection(direction);
+				// direction.multiplyScalar(this.data.speed * (deltaTime / 1000));
+				// this.el.object3D.position.add(direction);
+			}
+		});
+		AFRAME.registerComponent('sit-stand', {
+			schema: {
+				dur:	{type: 'int',	default: 250},
+				easing: {type: 'string', default: 'easeInSine'}
+			},
+
+			init: function () {
+				// map of all body parts that change between sit and stand
+				this.legs = [
+					{
+						id: '#head-joint',
+						sit:   {position: '0 0.34 0.10', rotation: '0 0 0'},
+						stand: {position: '0 0.26 0.22', rotation: '0 0 0'}
+					},
+					{
+						id: '#torso-joint',
+						sit:   {position: '0 .46 0.15', rotation: '0 0 0'},
+						stand: {position: '0 .46 0.15', rotation: '0 0 0'}
+					},
+					{
+						id: '#spine-joint',
+						sit:   {rotation: '45 0 0', position: '0 0.39 0'},
+						stand: {rotation: '87 0 0', position: '0 0.47 -0.06'}
+					},
+					{
+						id: '#rear-joint',
+						sit:   {position: '0 -.22 .02', rotation: '0 0 0'},
+						stand: {position: '0 -.22 .02', rotation: '0 0 0'}
+					},
+					{
+						id: '#backUpperLegR-joint',
+						sit:   {rotation: '0 0 90'},
+						stand: {rotation: '90 0 90'}
+					},
+					{
+						id: '#backUpperLegL-joint',
+						sit:   {rotation: '0 0 90'},
+						stand: {rotation: '90 0 90'}
+					},
+					{
+						id: '#backLegR-joint',
+						sit:   {position: '0.2 0 -.05', rotation: '90 -135 90'},
+						stand: {position: '0.02 0 .1',  rotation: '90 -90 0'}
+					},
+					{
+						id: '#backLegL-joint',
+						sit:   {position: '0.2 0 -.05', rotation: '90 -135 90'},
+						stand: {position: '0.02 0 .1',  rotation: '90 -90 0'}
+					},
+					{
+						id: '#frontLegR-joint',
+						sit:   {rotation: '0 0 10',  position: '-0.09 -0.21 0.1'},
+						stand: {rotation: '0 0 0',   position: '-0.12 -0.19 0.05'}
+					},
+					{
+						id: '#frontLegL-joint',
+						sit:   {rotation: '0 0 -10', position: '0.09 -0.21 0.1'},
+						stand: {rotation: '0 0 0',   position: '0.12 -0.19 0.05'}
+					},
+					{
+						id: '#frontLowerLegR-joint',
+						sit:   {position: '0 -0.18 .01', rotation: '0 0 -5'},
+						stand: {position: '0 -0.18 .01',  rotation: '0 0 0'}
+					},
+					{
+						id: '#frontLowerLegL-joint',
+						sit:   {position: '0 -0.18 .01', rotation: '0 0 5'},
+						stand: {position: '0 -0.18 .01',  rotation: '0 0 0'}
+					},
+					{
+						id: '#tail-joint',
+						sit:   {rotation: '-20 0 0', position: '0 -0.15 -0.15'},
+						stand: {rotation: '30 0 0',  position: '0 -0.20 -0.18'}
+					}
+				];
+
+				this.el.addEventListener('catsit',   () => this.startLegAnimations('sit'));
+				this.el.addEventListener('catstand', () => this.startLegAnimations('stand'));
+			},
+
+			startLegAnimations: function (pose) {
+				this.legs.forEach((leg, index) => {
+					const el = document.querySelector(leg.id);
+					if (!el) {
+						return;
+					}
+
+					el.removeAttribute('animation__pounce' + index + '_rot');
+					el.removeAttribute('animation__pounce' + index + '_pos');
+					el.removeAttribute('animation__pounce' + index + '_scale');
+
+					if (leg[pose].rotation) {
+						el.removeAttribute('animation__sitstand' + index + '_rot');
+						el.setAttribute('animation__sitstand' + index + '_rot', {
+							property: 'rotation',
+							to: leg[pose].rotation,
+							dur: this.data.dur,
+							easing: this.data.easing
+						});
+					}
+					if (leg[pose].position) {
+						el.removeAttribute('animation__sitstand' + index + '_pos');
+						el.setAttribute('animation__sitstand' + index + '_pos', {
+							property: 'position',
+							to: leg[pose].position,
+							dur: this.data.dur,
+							easing: this.data.easing
+						});
+					}
+
+				});
+			}
+		});
+		AFRAME.registerComponent('grid-floor', {
+			schema:{w:{default:8}, h:{default:8}, size:{default:1}},
+			init(){
+				const s = this.data.size, y = -90;
+
+				const canvas = document.getElementById('gridTexture');
+				const texture = new THREE.CanvasTexture(canvas);
+				const ctx = canvas.getContext('2d');
+
+				ctx.fillStyle = '#fff';
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+				ctx.strokeStyle = '#999';
+				ctx.lineWidth = 1;
+
+				const step = 64;
+				for (let x = 0; x <= canvas.width; x += step) {
+					ctx.beginPath();
+					ctx.moveTo(x, 0);
+					ctx.lineTo(x, canvas.height);
+					ctx.stroke();
+					ctx.moveTo(0, x);
+					ctx.lineTo(canvas.width, x);
+					ctx.stroke();
+				}
+				texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+				texture.repeat.set(.25, .25); // each tile shows full canvas
+
+				for(let j=0;j<this.data.h;j++){
+					for(let i=0;i<this.data.w;i++){
+						const p = document.createElement('a-plane');
+						p.classList.add('floor-tile');
+						p.setAttribute('rotation', y+' 0 0');
+						p.setAttribute('width', s);
+						p.setAttribute('height', s);
+						p.setAttribute('position',
+							(i - this.data.w/2 + .5) * s+' 0 '+(j - this.data.h/2 + .5) * s
+						);
+
+						p.addEventListener('loaded', () => {
+							const mesh = p.getObject3D('mesh');
+							if (mesh) {
+								mesh.material.map = texture;
+								mesh.material.needsUpdate = true;
+							}
+						});
+						p.dataset.gx = i;
+						p.dataset.gz = j;
+						this.el.appendChild(p);
+					}
+				}
+			}
+		});
+		AFRAME.registerComponent('blink', {
+			init: function () {
+				const eyes = this.el.querySelectorAll('.eye');
+				const originalPositions = [];
+				const blinkPositions = [];
+
+				// Store positions for both eyes
+				eyes.forEach((eye, i) => {
+					const pos = { ...eye.getAttribute('position') };
+					originalPositions[i] = pos;
+					blinkPositions[i] = { x: pos.x, y: pos.y, z: 0.1 };
+				});
+
+				function doBlink() {
+					eyes.forEach((eye, i) => {
+						eye.removeAttribute('animation__close');
+						eye.removeAttribute('animation__open');
+
+						eye.setAttribute('animation__close', {
+							property: 'position',
+							to: blinkPositions[i],
+							dur: 100,
+							easing: 'easeInSine'
+						});
+
+						eye.addEventListener('animationcomplete__close', function openOnce() {
+							eye.removeEventListener('animationcomplete__close', openOnce);
+
+							eye.setAttribute('animation__open', {
+								property: 'position',
+								to: originalPositions[i],
+								dur: 100,
+								easing: 'easeOutSine'
+							});
+						});
+					});
+
+					const nextBlink = 2000 + Math.random() * 2000;
+					setTimeout(doBlink, nextBlink);
+				}
+				setTimeout(doBlink, 2000);
+			}
+		});
+		AFRAME.registerComponent('look-at-cursor', {
+			//well, this component broke somewhere along the line. Current time: 3:02AM MT. Screw it.
+			schema: {
+				maxAngle: { type: 'number', default: 90 } // degrees left/right
+			},
+
+			init: function () {
+				this.cursor = document.querySelector('#rightHand');
+				this.initialRotationY = this.el.object3D.rotation.y; // store starting yaw
+			},
+
+			tick: function () {
+				const intersects = this.cursor.components.raycaster?.intersections;
+				if (!intersects || intersects.length === 0) return;
+
+				const target = intersects[0].point.clone();
+				const obj = this.el.object3D;
+
+				// Vector from head to target in world space
+				const headWorldPos = new THREE.Vector3();
+				obj.getWorldPosition(headWorldPos);
+				const dir = target.clone().sub(headWorldPos);
+
+				// Convert to local space (important if parent has rotation!)
+				const localDir = obj.parent.worldToLocal(dir.clone().add(headWorldPos)).sub(obj.position);
+
+				// Extract yaw (around Y) and pitch (around X)
+				const yaw = Math.atan2(localDir.x, localDir.z);
+				const pitch = -Math.atan2(localDir.y, Math.sqrt(localDir.x * localDir.x + localDir.z * localDir.z));
+
+				// Clamp yaw relative to initial
+				const maxRad = THREE.MathUtils.degToRad(this.data.maxAngle);
+				let relativeYaw = yaw;
+				relativeYaw = THREE.MathUtils.clamp(relativeYaw, -maxRad, maxRad);
+
+				// Apply rotation: keep clamped yaw + free pitch
+				obj.rotation.order = 'YXZ';  // Yaw, then Pitch, then Roll
+				obj.rotation.set(pitch, this.initialRotationY + relativeYaw, 0);
+			}
+		});
+		AFRAME.registerComponent('spotlight-detector', {
+			schema: {
+				target: {type: 'selector'},
+				angle: {type: 'number', default: 15},
+				range: {type: 'number', default: 25},
+				obstacles: {type: 'string', default: '.blocking-obj'}
+			},
+			init() {
+				this.raycaster = new THREE.Raycaster();
+				this.dir = new THREE.Vector3();
+				this.v = new THREE.Vector3();
+			},
+			tick() {
+				if (!this.data.target) {
+					this.data.target = this.el.sceneEl.querySelector('#cat');
+					if (!this.data.target) return;
+				}
+				const light = this.el.object3D;
+				const cat = this.data.target.object3D;
+				const lightPosition = new THREE.Vector3();
+				const catPosition = new THREE.Vector3();
+
+				light.getWorldPosition(lightPosition);
+				cat.getWorldPosition(catPosition);
+
+				this.v.subVectors(catPosition, lightPosition);
+				const dist = this.v.length();
+				if (dist > this.data.range) {
+					return; // too far
+				}
+				this.v.normalize();
+
+				this.dir.set(0, 0, -1).applyQuaternion(light.quaternion).normalize();
+				const angle = THREE.MathUtils.radToDeg(this.dir.angleTo(this.v));
+
+				if (angle > this.data.angle / 2) {
+					return; // out of cone
+				}
+
+				// New fix: collect all meshes from the cat and obstacles.
+				const allObjects = [];
+				cat.traverse(obj => {
+					if (obj.isMesh) {
+						allObjects.push(obj);
+					}
+				});
+
+				// Old behavior: add obstacles, but they are now secondary.
+				const obstacles = Array.from(document.querySelectorAll(this.data.obstacles))
+					.map(el => el.object3D);
+
+				obstacles.forEach(obstacle => {
+					obstacle.traverse(obj => {
+						if (obj.isMesh) {
+							allObjects.push(obj);
+						}
+					});
+				});
+
+				this.raycaster.set(lightPosition, this.v);
+				this.raycaster.far = dist;
+				const hits = this.raycaster.intersectObjects(allObjects, true);
+
+				if (hits.length > 0) {
+					// Now, we need to check if the first object hit is the cat.
+					const closestHit = hits[0].object;
+					let isCat = false;
+					closestHit.traverseAncestors(obj => {
+						if (obj.el && obj.el.id === 'cat') {
+							isCat = true;
+						}
+					});
+					if (isCat) {
+						setTimeout(()=>{this.data.target.emit('startjump');meowAngry();}, 0);
+						let cat = document.querySelector('#cat');
+						this.data.runningHome = true;
+						const recorder = cat.components['path-recorder'];
+						const retracer = cat.components['retrace-path'];
+						retracer.startRetrace(recorder.getPath());
+					}
+				}
+			}
+		});
+		AFRAME.registerComponent('path-recorder', {
+			schema: { interval: {type: 'number', default: 200} }, // ms
+			init: function () {
+				this.points = [];
+				this.time = 0;
+			},
+			clearPoints: function() {
+				this.points = [];
+				this.time = 0;
+			},
+			tick: function (t, dt) {
+				this.time += dt;
+				if (this.time < this.data.interval) return;
+				this.time = 0;
+
+				const pos = this.el.object3D.position.clone();
+				if (!this.points.length || pos.distanceTo(this.points[this.points.length - 1]) > 0.2) {
+					pos.y = .45;
+					this.points.push(pos);
+				}
+			},
+			getPath: function () {
+				// Return a copy
+				return this.points.slice();
+			}
+		});
+		AFRAME.registerComponent('retrace-path', {
+			schema: { speed: {type: 'number', default: 7} },
+			init: function () {
+				this.path = null;
+				this.current = 0;
+			},
+			startRetrace: function (points) {
+				this.path = points.reverse(); // walk backwards
+				this.current = 0;
+				this.el.emit('startrun');
+			},
+			tick: function (t, dt) {
+				if (!this.path || this.current >= this.path.length) {
+					if (this.el.components['run-on-trigger'].isMoving){
+						this.el.emit('stoprun');
+						let cat = document.querySelector('#cat');
+						const recorder = cat.components['path-recorder'];
+						recorder.clearPoints();
+					}
+					return;
+				}
+				const pos = this.el.object3D.position;
+				const target = this.path[this.current];
+				const dir = target.clone().sub(pos);
+				const dist = dir.length();
+				if (dist < 0.1) {
+					this.current++;
+					return;
+				}
+				dir.normalize();
+				pos.addScaledVector(dir, dt * 0.001 * this.data.speed);
+				this.el.object3D.lookAt(target);
+			}
+		});
+		AFRAME.registerComponent('mouse-laser', {
+			schema: { z: { type: 'number', default: -5 } },
+			init: function () {
+				window.addEventListener('mousemove', e => {
+					const scene = this.el.sceneEl;
+					const fov = scene.camera.fov * Math.PI / 180;
+					const height = 2 * Math.tan(fov/2) * Math.abs(this.data.z - scene.camera.position.z);
+					const width = height * (window.innerWidth/window.innerHeight);
+
+					const ndcX = (e.clientX / window.innerWidth) * 2 - 1;
+					const ndcY = -(e.clientY / window.innerHeight) * 2 + 1;
+
+					const x = ndcX * width/2;
+					const y = ndcY * height/2 + 1.5;
+
+					this.el.setAttribute('line', {
+						start: { x: 0, y: 1.5, z: 0 },
+						end:   { x: x, y: y, z: this.data.z },
+						color: 'blue'
+					});
+				});
+			}
+		});
+		AFRAME.registerComponent('mirror-laser', {
+			schema: { target: { type: 'selector' }, mirrorZ: { type: 'number', default: -5 } },
+			tick: function () {
+				const srcLaser = this.el;
+				const dstLaser = this.data.target;
+				const mirrorZ = this.data.mirrorZ;
+
+				const srcLine = srcLaser.getAttribute('line');
+				if (!srcLine) return;
+
+				const start = new THREE.Vector3(srcLine.start.x, srcLine.start.y, srcLine.start.z);
+				const end   = new THREE.Vector3(srcLine.end.x,   srcLine.end.y,   srcLine.end.z);
+				srcLaser.object3D.localToWorld(start);
+				srcLaser.object3D.localToWorld(end);
+				start.z = 2*mirrorZ - start.z;
+				end.z   = 2*mirrorZ - end.z;
+
+				dstLaser.setAttribute('line', { start: start, end: end, color: '#fff' });
+			}
+		});
+
+		AFRAME.registerComponent('mirror-figure', {
+			schema: { target: {type: 'selector'} }, // camera rig
+			tick: function () {
+				if (!this.data.target) return;
+				const rigWorld = new THREE.Vector3();
+				this.data.target.object3D.getWorldPosition(rigWorld);
+				const figPos = this.el.object3D.position;
+				figPos.x = rigWorld.x;   // copy only X
+			}
+		});
+		AFRAME.registerComponent('mirror-children', {
+			schema: { target: { type: 'selector' }, axis: { type: 'string', default: 'z' }, mirrorPos: { type: 'number', default:-7.9 } },
+			tick: function () {
+				if (!this.data.target) return;
+
+				srcPosition = this.data.target.getAttribute('position');
+				//srcPosition.z*=-1;
+				this.el.object3D.position.copy(this.data.target.getAttribute('position'));
+				this.el.setAttribute('position', srcPosition.x + ' ' + srcPosition.y + ' ' + ((this.data.mirrorPos - srcPosition.z) + this.data.mirrorPos));
+				this.el.object3D.quaternion.copy(this.data.target.object3D.quaternion);
+				const srcChildren = this.data.target.children;
+				const dstChildren = this.el.children;
+				srcRotation = this.data.target.getAttribute('rotation');
+				this.el.setAttribute('rotation', srcRotation.x + ' ' + (180-srcRotation.y) + ' ' + srcRotation.z);
+
+				for (let i = 0; i < Math.min(srcChildren.length, dstChildren.length); i++) {
+					const srcObj = srcChildren[i].object3D;
+					const dstObj = dstChildren[i].object3D;
+					dstObj.quaternion.copy(srcObj.quaternion);
+					dstObj.position.copy(srcObj.position);
+				}
+			}
+		});
+		AFRAME.registerComponent('tile-hover', {
+			init: function () {
+				this.hover = document.querySelector('#hover');
+				this.rightHand = document.querySelector('#rightHand');
+				this.currentTile = null;
+
+				this.rightHand.addEventListener('raycaster-intersection', e => {
+					const hit = e.detail.intersections[0]?.object?.el;
+					if (hit && hit.classList.contains('floor-tile')) {
+						this.currentTile = hit;
+					}
+				});
+
+				this.rightHand.addEventListener('raycaster-intersection-cleared', () => {
+					this.currentTile = null;
+					this.hover.setAttribute('visible', false);
+				});
+			},
+			tick: function () {
+				if (!this.currentTile) return;
+
+				if (isAdjacent(this.currentTile, catGrid)) {
+					const pos = this.currentTile.getAttribute('position');
+					this.hover.setAttribute('position', pos.x + ' 0.425 ' + pos.z);
+					this.hover.setAttribute('visible', true);
+				} else {
+					this.hover.setAttribute('visible', false);
+				}
+			}
+		});
+
+
+let justPounced = false;
+let pressingButton = false;
+document.addEventListener('DOMContentLoaded', () => {
+	scene = document.querySelector('#scene');
+	room = document.querySelector('#room');
+	scene.addEventListener('loaded', () => {
+		cat = buildEntity(catSpec, scene);
+		buildEntity(bgSpec, scene);
+		city();
+
+		buildEntity(hiddenArt, scene);
+		buildEntity(hiddenCamera, scene);
+
+		const rightHand = document.querySelector('#rightHand');
+		const hover	= document.querySelector('#hover');
+		if (rightHand) {
+			rightHand.addEventListener('raycaster-intersection', e => intersect(e));
+			rightHand.addEventListener('raycaster-intersection-cleared', () => {
+				hover.setAttribute('visible', false);
+			});
+			rightHand.addEventListener('click', e => hit(e));
+		}
+
+		// laser grid
+		for (let i=-5.5; i<=7.5; i+=1.5) {
+			let laser = document.createElement('a-cylinder');
+			laser.setAttribute('class', "laser");
+			laser.setAttribute('geometry', "radius:.01;height:21");
+			laser.setAttribute('rotation', "90 0 0");
+			laser.setAttribute('position', i+' 2.2 -7.5');
+			laser.setAttribute('material', "color:#f00;opacity:.3;emissive:#f66");
+			scene.appendChild(laser);
+		}
+		// add a starfield
+		let g=new THREE.BufferGeometry, N=2e3, p=new Float32Array(N*3);
+		for(let i=0;i<N;i++){
+			let v=new THREE.Vector3().randomDirection().multiplyScalar(150);
+			p.set([v.x,v.y,v.z],i*3);
+		}
+		g.setAttribute('position',new THREE.BufferAttribute(p,3));
+		let m=new THREE.PointsMaterial({color:0xffffff,size:.2,sizeAttenuation:false});
+		let stars=new THREE.Points(g,m);
+		scene.object3D.add(stars);
+		document.addEventListener('click', function(){updateCatGrid();});
+	});
+});
+</script>
+</head>
+<body>
+	<canvas id="gridTexture" width="64" height="64" style="display:none"></canvas>
+	<canvas id="ventTexture" style="display:none"></canvas>
+	<canvas id="brickTexture" width=128 height=512 style="display:none"></canvas>
+	<canvas id="brickTexture2" width=128 height=128 style="display:none"></canvas>
+	<canvas id="cityCanvas" width="211" height="211" style="display:none"></canvas>
+	<a-scene id="scene" background="color: #111" shadow="type: pcfsoft" fog="type: exponential; color: #AAA">
+		<a-entity id="room"></a-entity>
+		<a-entity id="reflection-cat"></a-entity>
+		<a-entity id="menu" position="200 3.5 -4" geometry="type:box;width:30;height:30;depth:30" material="color:#222;side:double">
+			<a-text value="INSIDE CAT" scale="4 4 4" position="-2.3 .5 0"></a-text>
+			<a-plane id="startLevel1" class="clickable" onclick="startGame(1)" width="1.5" height=".5" material="emissive:#00f" position="-2 -.55 0">
+				<a-text value="LEVEL 1" color="#fff" position="-.35 0 .1"></a-text>
+			</a-plane>
+			<a-plane id="startLevel2" class="clickable" onclick="startGame(2)" width="1.5" height=".5" material="emissive:#006" position="0 -.55 0">
+				<a-text value="LEVEL 2" color="#fff" position="-.35 0 .1"></a-text>
+			</a-plane>
+			<a-plane id="startLevel3" class="clickable" onclick="startGame(3)" width="1.5" height=".5" material="emissive:#006" position="2 -.55 0">
+				<a-text value="LEVEL 3" color="#fff" position="-.35 0 .1"></a-text>
+			</a-plane>
+		</a-entity>
+		<a-entity class="fader" light="type: ambient; intensity: 0" fade-trigger></a-entity>
+		<a-entity id="rig" position="200 1.2 3.2" rotation="0 0 0">
+			<a-camera></a-camera>
+			<a-entity
+					id="rightHand"
+					laser-controls="hand: right"
+					raycaster="objects: .floor-tile, .button, .clickable; ignore: .nohit; sort: true"
+			></a-entity>
+		</a-entity>
+		<a-entity id="player" position="0 3 -19.4">
+			<a-sphere radius=".25" position="0 0 0" color="#999"></a-sphere>
+			<a-cone radius-top=".1" radius-bottom=".3" height=".2" position="0 -.25 0" color="#999"></a-cone>
+			<a-cylinder radius=".3" height="1" position="0 -.85 0" color="#999"></a-cylinder>
+		</a-entity>
+	</a-scene>
+</body>
+</html>
